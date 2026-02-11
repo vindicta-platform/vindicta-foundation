@@ -26,5 +26,8 @@ Coverage Mandate: ≥90%
 
 ## Docs
 
-- [ADRs](docs/architecture/adr/): Architectural Decision Records.
-- [C4 Models](docs/architecture/C4-Target-State.md): System architecture diagrams.
+- [⚖️ The Constitution](docs/constitution.md): The supreme law and Zero-Order Axioms.
+- [🏗️ ADRs](docs/architecture/adr/): Architectural Decision Records.
+- [🗺️ C4 Models](docs/architecture/C4-Target-State.md): System architecture diagrams.
+- [📚 Core Concepts](docs/concepts/): Deep dives into WARScribe and platform logic.
+
