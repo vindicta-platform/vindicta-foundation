@@ -39,7 +39,7 @@ Submit a WARScribe transcript for analysis.
 POST /oracle/ask
 ```
 
-Query the Meta-Oracle for rules interpretations or strategic advice.
+Query the Meta-Oracle for meta analysis or strategic advice.
 
 ---
 
