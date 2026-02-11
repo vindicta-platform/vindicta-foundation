@@ -29,7 +29,6 @@ Submit a WARScribe transcript for analysis.
   "transcript": "...",
   "config": {
     "edition": "10th",
-    "simulate_dice": true
   }
 }
 ```
