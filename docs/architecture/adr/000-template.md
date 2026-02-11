@@ -1,7 +1,7 @@
 # ADR-XXX: [Title]
 
-**Status**: Proposed | Accepted | Deprecated | Superseded  
-**Date**: YYYY-MM-DD  
+**Status**: Proposed | Accepted | Deprecated | Superseded
+**Date**: YYYY-MM-DD
 **Decision Makers**: [Names/Roles]
 
 ## Context
@@ -17,13 +17,16 @@ What is the change that we're proposing and/or doing?
 What becomes easier or more difficult to do because of this change?
 
 ### Positive
-- 
+
+-
 
 ### Negative
-- 
+
+-
 
 ### Neutral
-- 
+
+-
 
 ## Alternatives Considered
 
