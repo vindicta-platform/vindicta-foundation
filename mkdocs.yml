@@ -1,0 +1,89 @@
+site_name: Vindicta Foundation
+site_description: Shared core models, constitutional axioms, and architectural documentation for the Vindicta Platform.
+site_author: Vindicta Platform Contributors
+site_url: https://vindicta-foundation.readthedocs.io/
+
+repo_name: vindicta-platform/vindicta-foundation
+repo_url: https://github.com/vindicta-platform/vindicta-foundation
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  font:
+    text: Outfit
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+nav:
+  - Home: index.md
+  - Roadmap: https://github.com/vindicta-platform/vindicta-foundation/blob/main/ROADMAP.md
+  - Constitution: constitution.md
+  - Core Concepts:
+    - WARScribe Whitepaper: concepts/warscribe-whitepaper.md
+    - WARScribe Manual: concepts/warscribe.md
+  - Architecture:
+    - Overview: architecture/overview.md
+    - Target State (C4): architecture/C4-Target-State.md
+    - Primordia Engine: architecture/primordia.md
+    - Inference Layer: architecture/inference-layer.md
+    - Cost Model: architecture/cost-model.md
+    - ADRs:
+      - ADR Directory: architecture/adr/0001-record-architecture-decisions.md
+      - ADR-001 Consolidation: architecture/adr/ADR-001-Consolidation.md
+      - C4 Model Architecture: architecture/adr/adr-001-c4-architecture-model.md
+      - API Versioning: architecture/adr/0003-api-versioning-strategy.md
+  - Getting Started:
+    - Quick Start: getting-started/quickstart.md
+    - Installation: getting-started/installation.md
+    - Your First Match: getting-started/first-match.md
+  - Features:
+    - Army Management: features/army-management.md
+    - Match Tracking: features/match-tracking.md
+    - Meta Analysis: features/meta-analysis.md
+    - AI Predictions: features/ai-predictions.md
+  - API Reference:
+    - REST API: api/rest.md
+    - CLI: api/cli.md
+
+
+
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+  - search
