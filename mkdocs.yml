@@ -1,7 +1,7 @@
 site_name: Vindicta Foundation
 site_description: Shared core models, constitutional axioms, and architectural documentation for the Vindicta Platform.
 site_author: Vindicta Platform Contributors
-site_url: https://vindicta-foundation.readthedocs.io/
+site_url: https://vindicta-platform.github.io/vindicta-foundation/
 
 repo_name: vindicta-platform/vindicta-foundation
 repo_url: https://github.com/vindicta-platform/vindicta-foundation
