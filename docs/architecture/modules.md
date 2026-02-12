@@ -4,105 +4,38 @@ Complete reference for all Vindicta modules.
 
 ---
 
-## Interface Layer
+## Meso-Repositories (Active)
 
-### Vindicta-CLI
+### [vindicta-foundation](https://github.com/vindicta-platform/vindicta-foundation)
+*The Shared Kernel and Source of Truth.*
+- **Includes**: `Vindicta-Core`, `Platform-Docs`, `platform-core`
+- **Purpose**: Domain primitives, Pydantic shared models, and centralized documentation.
 
-*Unified command-line interface*
+### [vindicta-engine](https://github.com/vindicta-platform/vindicta-engine)
+*Physics and Simulation Core.*
+- **Includes**: `Dice-Engine`, `Primordia-AI`, `Entropy-Buffer`
+- **Purpose**: CSPRNG dice rolling, entropy proofs, and deterministic tactical AI.
 
-```bash
-uv pip install git+https://github.com/vindicta-platform/Vindicta-CLI.git
-```
+### [warscribe-system](https://github.com/vindicta-platform/warscribe-system)
+*Notation and Vision Pipeline.*
+- **Includes**: `WARScribe-Core`, `WARScribe-Parser`, `WARScribe-CLI`, `Battle-Transcript-Toolkit`
+- **Purpose**: WNS notation parsing, roster ingestion, and transcript reconstruction.
 
-### Vindicta-API
+### [vindicta-economy](https://github.com/vindicta-platform/vindicta-economy)
+*The Atomic Economy.*
+- **Includes**: `Economy-Engine`, `Atomic-Ledger-Py`, `Quota-Manager`
+- **Purpose**: Resource tracking, gas tank management, and auditable ledgers.
 
-*FastAPI REST endpoints*
+### [vindicta-oracle](https://github.com/vindicta-platform/vindicta-oracle)
+*Predictive Analysis.*
+- **Includes**: `Meta-Oracle`, `Arbiter-Predictor`
+- **Purpose**: ML models for win probability and debate-engine strategic insights.
 
-```bash
-uv pip install git+https://github.com/vindicta-platform/Vindicta-API.git
-```
+### [vindicta-platform](https://github.com/vindicta-platform/vindicta-platform)
+*Gateway and User Interface.*
+- **Includes**: `Vindicta-Portal`, `Vindicta-API`, `Vindicta-CLI`, `Logi-Slate-UI`
+- **Purpose**: Orchestration, API gateway, and the Slate UI frontend.
 
-### Logi-Slate-UI
-
-*React/TypeScript web interface*
-
-```bash
-git clone https://github.com/vindicta-platform/Logi-Slate-UI.git
-```
-
----
-
-## Core Modules
-
-### Vindicta Foundation
-
-Core domain models and architectural primitives.
-
-```bash
-uv pip install git+https://github.com/vindicta-platform/vindicta-foundation.git
-```
-
-### Vindicta Engine
-
-Physics, dice rolling, and simulation engine.
-
-```bash
-uv pip install git+https://github.com/vindicta-platform/vindicta-engine.git
-```
-
-### Warscribe System
-
-Notation parsing and ingestion system.
-
-```bash
-uv pip install git+https://github.com/vindicta-platform/warscribe-system.git
-```
-
-### Vindicta Economy
-
-Virtual economy, ledger, and transaction management.
-
-```bash
-uv pip install git+https://github.com/vindicta-platform/vindicta-economy.git
-```
-
-### Vindicta Oracle
-
-Meta analysis, predictions, and debate council.
-
-```bash
-uv pip install git+https://github.com/vindicta-platform/vindicta-oracle.git
-```
-
-### Vindicta Platform
-
-Web portal and API services.
-*(Repo contains multiple sub-packages)*
-
-### Vindicta Agents
-
-Agent SDKs and workflows.
-
-```bash
-uv pip install git+https://github.com/vindicta-platform/vindicta-agents.git
-```
-
----
-
-## WARScribe Family
-
-### WARScribe-Parser
-
-*High-level parsing library*
-
-```bash
-uv pip install git+https://github.com/vindicta-platform/WARScribe-Parser.git
-```
-
-### WARScribe-CLI
-
-*Command-line tools*
-
-```bash
-uv pip install git+https://github.com/vindicta-platform/WARScribe-CLI.git
-```
+### [vindicta-agents](https://github.com/vindicta-platform/vindicta-agents)
+*Agent SDK & Swarm Orchestration.*
+- **Purpose**: Autonomous agent development and cross-domain task execution.
