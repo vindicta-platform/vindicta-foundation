@@ -1,5 +1,6 @@
 from pathlib import Path
 from behave import given, when, then
+import subprocess
 
 
 @given("the project dependencies are locked")
@@ -21,6 +22,38 @@ def step_check_dev_dependency(context, package):
         f'"{package}"' in context.pyproject_content
         or f'"{package}>=' in context.pyproject_content
     ), f"Expected to find {package} in pyproject.toml"
+
+
+@given("the pytest-sugar plugin is installed")
+def step_pytest_sugar_installed(context):
+    result = subprocess.run(
+        ["uv", "run", "python", "-c", "import pytest_sugar"],
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode == 0, "pytest-sugar is not installed in the environment"
+
+
+@when("I run the test suite")
+def step_run_test_suite(context):
+    result = subprocess.run(
+        ["uv", "run", "pytest", "-q", "--no-header"],
+        capture_output=True,
+        text=True,
+    )
+    context.test_output = result.stdout + result.stderr
+    context.test_exit_code = result.returncode
+
+
+@then("the output should be formatted with a progress bar and clear pass/fail indicators")
+def step_check_output_format(context):
+    assert context.test_exit_code == 0, (
+        f"Test suite failed (exit code {context.test_exit_code}):\n{context.test_output}"
+    )
+    output_upper = context.test_output.upper()
+    assert "PASSED" in output_upper or "passed" in context.test_output, (
+        f"Pass/fail indicators not found in output:\n{context.test_output}"
+    )
 
 
 @given("the Justfile exists")
