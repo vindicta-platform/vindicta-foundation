@@ -20,6 +20,10 @@ To build the most mechanically faithful, cryptographically secure, and accessibl
 - [ ] **Combat Sim**: First end-to-end simulation of a full combat round.
 - [x] **Documentation Migration**: Move truth source to `vindicta-foundation`.
 - [x] **Stability Pass**: Harmonize ADRs and stabilize dev environments (Feb 2026).
+    - [x] Minimal devcontainer (ADR-0008), YAGNI rules, retrospective docs.
+    - [x] PR workflow standardization (body-file mandate).
+    - [x] Ruff format enforcement in pre-flight checks.
+- [ ] **CI Hardening**: Add `pytest-cov` dependency and configure GitHub Actions CI.
 
 ## Phase 3: Identity & Gateway
 - [ ] **Portal Redesign**: Split-pane entry for Club and Platform.
