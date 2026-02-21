@@ -14,7 +14,7 @@ The `vindicta-foundation` repository is the **Single Source of Truth** for the e
 The supreme law governing the platform. It defines the Zero-Order Axioms (the physics of the simulation) and the First-Order Postulates (the abstract mechanics).
 
 ### 🏗️ [Architecture](architecture/overview.md)
-The structural blueprint of the platform. This includes the [C4 Target State](architecture/C4-Target-State.md) and the [Consolidation Plan](architecture/adr/ADR-001-Consolidation.md) to migrate from 29 repositories to 7 specialized Meso-repos.
+The structural blueprint of the platform. This includes the [C4 Target State](architecture/C4-Target-State.md) and the [Consolidation Plan](architecture/adr/0005-consolidation.md) to migrate from 29 repositories to 7 specialized Meso-repos.
 
 ### 🧬 [Shared Models](https://github.com/vindicta-platform/vindicta-foundation/tree/main/src/vindicta_foundation/models)
 Canonical Pydantic models for `Unit`, `DiceRoll`, `Action`, and `GameScore`. By sharing these models, we ensure perfect interoperability between the engine, the scribe, and the interface.
