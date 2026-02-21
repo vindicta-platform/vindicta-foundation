@@ -1,9 +1,20 @@
 {
     "name": "Vindicta Foundation",
-    "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+    "image": "python:3.12-bookworm",
     "features": {
-        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": "false",
+            "username": "vscode",
+            "userUid": "1000",
+            "userGid": "1000",
+            "upgradePackages": "true"
+        },
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {}
     },
+    "forwardPorts": [
+        8000
+    ],
     "customizations": {
         "vscode": {
             "settings": {
@@ -11,7 +22,6 @@
                 "python.formatting.provider": "none",
                 "editor.formatOnSave": true,
                 "[python]": {
-                    "editor.defaultFormatter": "charliermarsh.ruff",
                     "editor.codeActionsOnSave": {
                         "source.fixAll": "explicit",
                         "source.organizeImports": "explicit"
@@ -40,6 +50,6 @@
             ]
         }
     },
-    "postCreateCommand": "pipx install uv && uv sync --all-extras",
+    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && export PATH=\"$HOME/.local/bin:$PATH\" && cd ${workspaceFolder} && uv sync --all-extras && uv tool install rust-just",
     "remoteUser": "vscode"
 }
