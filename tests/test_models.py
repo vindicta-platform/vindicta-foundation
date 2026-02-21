@@ -26,15 +26,15 @@ def test_entropy_proof_validation() -> None:
 
 def test_gas_tank_state_logic() -> None:
     # Empty tank
-    empty = GasTankState(balance_usd=0.0, limit_usd=10.0)
+    empty = GasTankState(balance_usd=0.0, limit_usd=10.0, is_active=True)
     assert empty.is_empty is True
     assert empty.is_low is True
 
     # Full tank
-    full = GasTankState(balance_usd=10.0, limit_usd=10.0)
+    full = GasTankState(balance_usd=10.0, limit_usd=10.0, is_active=True)
     assert full.is_empty is False
     assert full.is_low is False
 
     # Low tank (below 10%)
-    low = GasTankState(balance_usd=0.9, limit_usd=10.0)
+    low = GasTankState(balance_usd=0.9, limit_usd=10.0, is_active=True)
     assert low.is_low is True
