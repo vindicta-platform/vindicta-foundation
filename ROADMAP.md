@@ -14,10 +14,12 @@ To build the most mechanically faithful, cryptographically secure, and accessibl
 - [x] Implement **VindictaModel** base class for Pydantic V2.
 
 ## Phase 2: Mechanics & Notation (ACTIVE)
+*The Foundation serves as the core dependency for all mechanical implementations.*
 - [x] **WARScribe**: Finalize notation parsing for 10th Edition.
 - [ ] **Dice Engine**: Implement CSPRNG with verifiable entropy proofs.
 - [ ] **Combat Sim**: First end-to-end simulation of a full combat round.
 - [x] **Documentation Migration**: Move truth source to `vindicta-foundation`.
+- [x] **Stability Pass**: Harmonize ADRs and stabilize dev environments (Feb 2026).
 
 ## Phase 3: Identity & Gateway
 - [ ] **Portal Redesign**: Split-pane entry for Club and Platform.
@@ -43,4 +45,4 @@ To build the most mechanically faithful, cryptographically secure, and accessibl
 
 ---
 
-*Last updated: 2026-02-11*
+*Last updated: 2026-02-21*
