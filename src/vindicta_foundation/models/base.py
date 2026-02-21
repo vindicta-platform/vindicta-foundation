@@ -22,8 +22,7 @@ class VindictaModel(BaseModel):
         default_factory=uuid4, description="Unique identifier for the entity"
     )
     created_at: datetime = Field(
-        default_factory=lambda: datetime.now(timezone.utc),
-        description="Timestamp of creation",
+        default_factory=lambda: datetime.now(timezone.utc), description="Timestamp of creation"
     )
     updated_at: datetime | None = Field(
         default=None, description="Timestamp of last update"
