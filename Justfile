@@ -5,8 +5,9 @@ test:
     uv run pytest --cov=vindicta_foundation -n auto
     uv run behave
 
-# Run linters and type checkers
+# Run linters, format checkers, and type checkers
 lint:
+    uv run ruff format --check .
     uv run ruff check .
     uv run mypy src tests
 
