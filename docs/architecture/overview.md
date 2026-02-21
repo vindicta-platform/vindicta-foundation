@@ -9,29 +9,26 @@ Vindicta's modular architecture explained.
 Vindicta follows a **modular meso-repository** approach:
 
 - **Meso-Repositories** group logically related components (e.g., `warscribe-system` contains Core, CLI, and Parser).
-- **Project Primordia** serves as the central evaluation and simulation engine.
 - Components communicate through well-defined interfaces and shared foundational models.
 
 ```mermaid
 graph TD
-    User[User / Player] --> Portal[Vindicta Portal]
-    User --> CLI[Vindicta CLI]
+    User[User / Player] --> Portal[Vindicta Platform]
+    User --> CLI[Vindicta CLI / Scripts]
 
     subgraph "Interface Layer"
         Portal
         CLI
-        API[Vindicta API]
     end
 
     subgraph "Core Domain Services"
-        Orchestrator[Orchestrator / Agents]
-        Oracle[Meta-Oracle]
-        Economy[Economy Engine]
+        Orchestrator[Vindicta Agents]
+        Oracle[Vindicta Oracle]
+        Economy[Vindicta Economy]
     end
 
     subgraph "Evaluation & Physics"
-        Primordia[Project Primordia]
-        Dice[Dice Engine]
+        Engine[Vindicta Engine]
     end
 
     subgraph "Standardization"
@@ -39,15 +36,13 @@ graph TD
         Foundation[Vindicta Foundation]
     end
 
-    Portal --> API
-    CLI --> API
-    API --> Orchestrator
-    Orchestrator --> Primordia
+    Portal --> Orchestrator
+    CLI --> Orchestrator
+    Orchestrator --> Engine
     Orchestrator --> Oracle
     Orchestrator --> Economy
 
-    Primordia --> Dice
-    Primordia --> WARScribe
+    Engine --> WARScribe
 
     WARScribe -.-> Foundation
     Oracle -.-> Foundation
@@ -56,27 +51,28 @@ graph TD
 
 ## Core Modules
 
-| Module                  | Repository                         | Purpose                                                        |
-| :---------------------- | :--------------------------------- | :------------------------------------------------------------- |
-| **Vindicta Foundation** | `vindicta-foundation`              | Base models, Architecture, Constitution, Axioms.               |
-| **Project Primordia**   | `Primordia-AI` / `vindicta-engine` | The core evaluation engine for combat simulation and analysis. |
-| **WARScribe System**    | `warscribe-system`                 | Universal Wargaming Notation System, Parser, and CLI tools.    |
-| **Vindicta Economy**    | `vindicta-economy`                 | Ledger, GasTank, Transactions, and Achievements.               |
-| **Meta-Oracle**         | `vindicta-oracle`                  | Debate Council, Prediction markets, and Agent Protocol.        |
-| **Vindicta Portal**     | `Vindicta-Portal`                  | The unified web interface for the platform.                    |
-| **Vindicta Agents**     | `Vindicta-Agents`                  | Agentic workflows and swarm intelligence.                      |
+| Module                  | Repository            | Purpose                                                        |
+| :---------------------- | :-------------------- | :------------------------------------------------------------- |
+| **Vindicta Foundation** | `vindicta-foundation` | Base models, Architecture, Constitution, Axioms.               |
+| **Vindicta Engine**     | `vindicta-engine`     | The core evaluation engine for combat simulation and analysis. |
+| **WARScribe System**    | `warscribe-system`    | Universal Wargaming Notation System, Parser, and CLI tools.    |
+| **Vindicta Economy**    | `vindicta-economy`    | Ledger, GasTank, Transactions, and API limits.                 |
+| **Vindicta Oracle**     | `vindicta-oracle`     | Debate Council, Prediction markets, and intelligent advisors.  |
+| **Vindicta Platform**   | `vindicta-platform`   | The unified web interface and identity service for the system. |
+| **Vindicta Agents**     | `vindicta-agents`     | Agentic workflows, auditing sdk, and swarm intelligence.       |
 
 ## Data Flow
 
 ```
-User → [Portal/CLI] → API → Orchestrator
-                                  │
-                  ┌───────────────┼───────────────┐
-                  ↓               ↓               ↓
-            Project Primordia   Economy      Meta-Oracle
-                  │
-                  ↓
-           WARScribe Notation
+User → [Platform/CLI] → Engine & Agents
+                              │
+              ┌───────────────┼───────────────┐
+              ↓               ↓               ↓
+        WARScribe System   Economy         Oracle
+              │               │               │
+              └───────────────┼───────────────┘
+                              ↓
+                      Vindicta Foundation
 ```
 
 ---

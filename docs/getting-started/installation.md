@@ -26,24 +26,24 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 ## Component Installation
 
-### Platform Core
+### The Engine (Physics & Simulation)
 
-The central integration layer:
+The simulation engine and back-end logic layer:
 
 ```bash
-git clone https://github.com/vindicta-platform/platform-core.git
-cd platform-core
-uv venv
-uv pip install -e ".[dev]"
+git clone https://github.com/vindicta-platform/vindicta-engine.git
+cd vindicta-engine
+uv sync
 ```
 
-### Vindicta-Portal
+### The Platform (Web & Identity)
 
-The unified web interface for the platform.
+The unified web interface and user entry point:
 
 ```bash
-git clone https://github.com/vindicta-platform/Vindicta-Portal.git
-cd Vindicta-Portal
+git clone https://github.com/vindicta-platform/vindicta-platform.git
+cd vindicta-platform
+npm install
 ```
 
 ### Individual Modules
@@ -61,10 +61,6 @@ uv pip install git+https://github.com/vindicta-platform/vindicta-economy.git
 uv pip install git+https://github.com/vindicta-platform/vindicta-oracle.git
 ```
 
-npm install
-npm run dev
-```
-
 ---
 
 ## Verification
@@ -72,11 +68,8 @@ npm run dev
 Verify your installation:
 
 ```bash
-# Check CLI
-vindicta --version
-
-# Check API
-curl http://localhost:8000/health
+# Check CLI equivalent (if installed)
+# vindicta --version
 
 # Run tests
 pytest tests/ -v

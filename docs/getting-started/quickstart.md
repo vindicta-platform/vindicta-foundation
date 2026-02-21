@@ -11,21 +11,19 @@ Get Vindicta running in 5 minutes.
 - Docker & Docker Compose (for full platform)
 - A terminal
 
-## Option 1: Unified CLI
+## Option 1: The Engine (Simulation)
 
-The `Vindicta-CLI` provides a unified entry point for all platform tools.
+The `vindicta-engine` handles all mechanics, dice resolution, and physics.
 
 ```bash
-# Clone the CLI repository
-git clone https://github.com/vindicta-platform/Vindicta-CLI.git
-cd Vindicta-CLI
+# Clone the Engine repository
+git clone https://github.com/vindicta-platform/vindicta-engine.git
+cd vindicta-engine
 
 # Install with uv
 uv sync
 source .venv/bin/activate
-
-# Verify installation
-vindicta --version
+# or `uv run pytest` directly
 ```
 
 ## Option 2: Full Platform (Docker)
@@ -44,13 +42,14 @@ docker-compose up -d
 # Open http://localhost:3000
 ```
 
-## Option 3: Interface Only (Portal)
+## Option 3: Interface Only (Platform Web)
 
-If you only want to work on the frontend:
+If you only want to work on the frontend portals:
 
 ```bash
-git clone https://github.com/vindicta-platform/Vindicta-Portal.git
-cd Vindicta-Portal
+git clone https://github.com/vindicta-platform/vindicta-platform.git
+cd vindicta-platform
+# Add typical JS/frontend commands here via the web workspaces
 npm install
 npm run dev
 

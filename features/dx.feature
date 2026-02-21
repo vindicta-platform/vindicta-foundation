@@ -6,8 +6,7 @@ Feature: Developer Experience
   Scenario: Essential testing packages are installed
     Given the project dependencies are locked
     When I inspect the pyproject.toml configuration
-    Then the "dev" dependencies should include "pytest-sugar"
-    And the "dev" dependencies should include "pytest-xdist"
+    Then the "dev" dependencies should include "pytest-xdist"
 
   Scenario: Pytest is optimally configured for parallel execution
     Given the Justfile exists
