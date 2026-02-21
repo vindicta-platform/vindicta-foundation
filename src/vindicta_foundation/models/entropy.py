@@ -5,6 +5,7 @@ from pydantic import Field, field_validator
 
 from vindicta_foundation.models.base import VindictaModel
 
+
 class EntropyProof(VindictaModel):
     """
     Cryptographically verifiable proof for mechanical actions.
@@ -12,15 +13,16 @@ class EntropyProof(VindictaModel):
     Constitutional Compliance:
     - Rule VII: No probabilistic AI. All randomness must be traceable.
     """
+
     seed_hash: str = Field(..., description="SHA-256 hash of the entropy seed")
-    timestamp: datetime = Field(default_factory=datetime.utcnow, description="Time of entropy generation")
+    timestamp: datetime = Field(
+        default_factory=datetime.utcnow, description="Time of entropy generation"
+    )
     algorithm: Literal["csprng", "rejection_sampling"] = Field(
-        default="csprng", 
-        description="The method used to generate entropy"
+        default="csprng", description="The method used to generate entropy"
     )
     audit_trail_id: UUID = Field(
-        default_factory=uuid4, 
-        description="Link to the audit log for this random event"
+        default_factory=uuid4, description="Link to the audit log for this random event"
     )
 
     @field_validator("seed_hash")
