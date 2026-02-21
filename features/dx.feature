@@ -6,7 +6,13 @@ Feature: Developer Experience
   Scenario: Essential testing packages are installed
     Given the project dependencies are locked
     When I inspect the pyproject.toml configuration
-    Then the "dev" dependencies should include "pytest-xdist"
+    Then the "dev" dependencies should include "pytest-sugar"
+    And the "dev" dependencies should include "pytest-xdist"
+
+  Scenario: Testing output is enhanced for developer productivity
+    Given the pytest-sugar plugin is installed
+    When I run the test suite
+    Then the output should be formatted with a progress bar and clear pass/fail indicators
 
   Scenario: Pytest is optimally configured for parallel execution
     Given the Justfile exists
