@@ -52,9 +52,11 @@ nav:
     - Cost Model: architecture/cost-model.md
     - ADRs:
       - ADR Directory: architecture/adr/0001-record-architecture-decisions.md
-      - ADR-001 Consolidation: architecture/adr/ADR-001-Consolidation.md
-      - C4 Model Architecture: architecture/adr/adr-001-c4-architecture-model.md
-      - API Versioning: architecture/adr/0003-api-versioning-strategy.md
+      - ADR-0002 C4 Architecture: architecture/adr/0002-c4-architecture-model.md
+      - ADR-0003 Require Interface: architecture/adr/0003-require-interface.md
+      - ADR-0004 API Versioning: architecture/adr/0004-api-versioning-strategy.md
+      - ADR-0005 Consolidation: architecture/adr/0005-consolidation.md
+      - ADR-0006 Consolidation Tactics: architecture/adr/0006-consolidation-tactics.md
   - Getting Started:
     - Quick Start: getting-started/quickstart.md
     - Installation: getting-started/installation.md
