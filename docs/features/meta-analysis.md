@@ -19,7 +19,7 @@ The Meta Dashboard shows:
 
 ## Sleeper Detection
 
-The Meta-Oracle AI identifies undervalued lists:
+The Vindicta Oracle identifies undervalued lists:
 
 > "The 5-Agent Debate identifies lists that are **statistically underrepresented** relative to their win potential."
 

@@ -1,12 +1,12 @@
 # AI Predictions
 
-Win probability and tactical insights powered by Meta-Oracle.
+Win probability and tactical insights powered by the Vindicta Oracle.
 
 ---
 
 ## Overview
 
-Meta-Oracle uses adversarial AI debate to generate predictions. Five specialized agents argue about outcomes, then a Rule-Sage auditor validates all claims.
+The Vindicta Oracle uses adversarial AI debate to generate predictions. Five specialized agents argue about outcomes, then a Rule-Sage auditor validates all claims.
 
 ## Win Probability
 
@@ -39,15 +39,15 @@ Before you deploy, get tactical suggestions:
 
 ## The 5-Agent Swarm
 
-Meta-Oracle's predictions come from debate between:
+The Vindicta Oracle's predictions come from debate between:
 
-| Agent | Role |
-|-------|------|
-| **Home** | Argues for your list |
-| **Adversary** | Argues against |
-| **Arbiter** | Provides statistical context |
-| **Rule-Sage** | Validates mechanical claims |
-| **Council** | Synthesizes final prediction |
+| Agent         | Role                         |
+| ------------- | ---------------------------- |
+| **Home**      | Argues for your list         |
+| **Adversary** | Argues against               |
+| **Arbiter**   | Provides statistical context |
+| **Rule-Sage** | Validates mechanical claims  |
+| **Council**   | Synthesizes final prediction |
 
 ## Accuracy
 
