@@ -1,8 +1,9 @@
 ---
 description: Generate a standardized Pull Request description and submit or update it via GitHub CLI.
 ---
-1. **Analyze Diff**: Run `git log <base>..<head>` or `git diff <base>...<head>` to understand the full scope of changes made in the branch.
-2. **Draft PR Body**: Create a local file named `PR_BODY.md`. It MUST contain the following sections formatted in Markdown:
+1. **Local Pre-flight Checks**: Run `just prepush` (or equivalent test and lint commands locally) to assert that the PR will not fail CI checks. **Do not create a PR if these fail.**
+2. **Analyze Diff**: Run `git log <base>..<head>` or `git diff <base>...<head>` to understand the full scope of changes made in the branch.
+3. **Draft PR Body**: Create a local file named `PR_BODY.md`. It MUST contain the following sections formatted in Markdown:
     *   **Summary**: A high-level overview of the entire PR.
     *   **Changes**: A bulleted list of the specific files changed and what was done.
     *   **Why**: The root cause, business value, or technical reason for the change.
