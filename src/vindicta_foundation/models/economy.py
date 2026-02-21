@@ -2,6 +2,7 @@ from pydantic import Field
 
 from vindicta_foundation.models.base import VindictaModel
 
+
 class GasTankState(VindictaModel):
     """
     Tracks the economic state of the platform to prevent runaway AI costs.
@@ -9,9 +10,14 @@ class GasTankState(VindictaModel):
     Constitutional Compliance:
     - Rule II: Gas Tank Model must enforce hard limits on API spend.
     """
-    balance_usd: float = Field(0.0, ge=0.0, description="Current available balance in USD")
+
+    balance_usd: float = Field(
+        0.0, ge=0.0, description="Current available balance in USD"
+    )
     limit_usd: float = Field(0.0, ge=0.0, description="Maximum allowed spend")
-    is_active: bool = Field(True, description="Whether the tank is currently fueling operations")
+    is_active: bool = Field(
+        True, description="Whether the tank is currently fueling operations"
+    )
 
     @property
     def is_empty(self) -> bool:
