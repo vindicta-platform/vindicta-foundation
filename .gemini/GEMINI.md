@@ -17,4 +17,4 @@
     - **Coverage**: Minimum 90% test coverage required. Verify with `uv run pytest`.
     - **Types**: Strict type checking with `mypy` is mandatory.
     - **Linting**: All code must pass `ruff` checks.
-6. **Speckit Integration**: Utilize the local Speckit tools in `.gemini/commands/` for complex tasks like task extraction, planning, and implementation planning.
+6. **Speckit Integration & Workflows**: Utilize the IDE slash commands defined in `.agent/workflows/` (e.g., `/speckit-plan`, `/speckit-tasks`) for complex tasks like task extraction, planning, and implementation. Do not attempt to manually reference or run `.gemini/commands/*.toml` configuration files.
