@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+**/__pycache__/
 *.py[cod]
+*.pycc
 *$py.class
 
 # C extensions
@@ -152,4 +153,10 @@ cython_debug/
 
 # Project specific
 uv.lock
- .uv/
+.uv/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

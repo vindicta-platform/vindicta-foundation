@@ -3,8 +3,12 @@
 
 ## Core Principles
 
+### I. Foundation Adherence (NON-NEGOTIABLE)
+<!-- Requirement for all Vindicta projects -->
+All technical decisions, specs, and tasks generated under this constitution MUST adhere to the **Zero-Order Axioms** defined in the [Platform Foundation Constitution](../../docs/constitution.md). This document (Tier 2) strictly governs the *implementation and generation* process, while the Foundation Constitution (Tier 1) governs the *universal mechanics and truth*.
+
 ### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
+<!-- Example: II. Library-First -->
 [PRINCIPLE_1_DESCRIPTION]
 <!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
