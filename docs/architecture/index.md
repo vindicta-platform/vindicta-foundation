@@ -279,4 +279,4 @@ See [evolution.md](./evolution.md) for per-repo maturity tracking and tech radar
 
 ---
 
-*Generated from [c4/workspace.dsl](../../c4/workspace.dsl) — see [ADR-001](../adr/adr-001-c4-architecture-model.md) for the decision record.*
+*Generated from the canonical [workspace.dsl](https://github.com/vindicta-platform/vindicta-foundation) — see [ADR-0002](adr/0002-c4-architecture-model.md) for the decision record.*

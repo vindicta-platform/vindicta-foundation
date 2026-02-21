@@ -16,7 +16,7 @@ The top of the README must be replaced with the following block:
 # ⚠️ ARCHIVED — Consolidated into `[NEW-REPO-NAME]`
 
 > **This repository has been superseded.**
-> All functionality has been ported into [`[NEW-REPO-NAME]/[PATH]`](https://github.com/vindicta-platform/[NEW-REPO-NAME]) as part of [ADR-001](https://github.com/vindicta-platform/vindicta-foundation/blob/main/docs/architecture/adr/ADR-001-Consolidation.md).
+> All functionality has been ported into [`[NEW-REPO-NAME]/[PATH]`](https://github.com/vindicta-platform/[NEW-REPO-NAME]) as part of [ADR-001](https://github.com/vindicta-platform/vindicta-foundation/blob/main/docs/architecture/adr/0005-consolidation.md).
 
 ## Migration Mapping
 | Legacy Path | New Path                      |

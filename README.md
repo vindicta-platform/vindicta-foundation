@@ -1,8 +1,8 @@
-> **Part of the [Vindicta Platform](https://github.com/vindicta-platform)**
-
 # Vindicta Foundation
 
-Shared core models, constitutional axioms, and architectural documentation for the Vindicta Platform.
+The **central hub** and **core pillar** of the [Vindicta Platform](https://github.com/vindicta-platform). This repository provides the axiomatic base models, shared kernel logic, and constitutional documentation that all other Vindicta microservices, agents, and clients depend upon.
+
+---
 
 ## Installation
 
