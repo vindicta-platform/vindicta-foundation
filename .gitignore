@@ -160,3 +160,4 @@ htmlcov/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.github/PR_BODY.md
