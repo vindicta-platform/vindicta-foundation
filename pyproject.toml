@@ -19,6 +19,13 @@ dev = [
     "pytest>=8.0.0",
     "pytest-cov>=4.1.0",
     "behave>=1.2.6",
+    "pre-commit",
+    "pytest-xdist",
+    "pytest-sugar",
+    "pytest-mock",
+    "mkdocs-macros-plugin",
+    "mike",
+    "towncrier",
 ]
 
 [tool.hatch.build.targets.wheel]

@@ -1,0 +1,45 @@
+{
+    "name": "Vindicta Foundation",
+    "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+                "python.formatting.provider": "none",
+                "editor.formatOnSave": true,
+                "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll": "explicit",
+                        "source.organizeImports": "explicit"
+                    }
+                },
+                "python.testing.pytestEnabled": true,
+                "python.testing.unittestEnabled": false,
+                "python.testing.pytestArgs": [
+                    "tests"
+                ],
+                "ruff.importStrategy": "fromEnvironment",
+                "ruff.path": [
+                    "${workspaceFolder}/.venv/bin/ruff"
+                ],
+                "mypy.targets": [
+                    "src",
+                    "tests"
+                ]
+            },
+            "extensions": [
+                "ms-python.python",
+                "charliermarsh.ruff",
+                "matangover.mypy",
+                "tamasfe.even-better-toml",
+                "davidanson.vscode-markdownlint"
+            ]
+        }
+    },
+    "postCreateCommand": "pipx install uv && uv sync --all-extras",
+    "remoteUser": "vscode"
+}
