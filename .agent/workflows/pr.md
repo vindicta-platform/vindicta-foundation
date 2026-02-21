@@ -1,7 +1,7 @@
 ---
 description: Generate a standardized Pull Request description and submit or update it via GitHub CLI.
 ---
-1. **Local Pre-flight Checks**: Run `just prepush` (or equivalent test and lint commands locally) to assert that the PR will not fail CI checks. **Do not create a PR if these fail.**
+1. **Local Pre-flight Checks**: Run `just prepush` (or explicitly run `uv run ruff format --check .`, `uv run ruff check .`, `uv run mypy src tests`, `uv run pytest`, and `uv run behave`) to assert that the PR will not fail CI checks. **Do not create a PR if these fail.**
 2. **Analyze Diff**: Run `git log <base>..<head>` or `git diff <base>...<head>` to understand the full scope of changes made in the branch.
 3. **Draft PR Body**: Create a local file named `PR_BODY.md`. It MUST contain the following sections formatted in Markdown:
     *   **Summary**: A high-level overview of the entire PR.

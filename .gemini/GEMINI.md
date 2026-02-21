@@ -16,7 +16,7 @@
 5. **Quality Mandates**:
     - **Coverage**: Minimum 90% test coverage required. Verify with `uv run pytest`.
     - **Types**: Strict type checking with `mypy` is mandatory.
-    - **Linting**: All code must pass `ruff` checks.
+    - **Linting & Formatting**: All code must pass `ruff check .` AND `ruff format --check .`. Verify explicitly during pre-flight checks if `just prepush` fails.
 6. **Speckit Integration & Workflows**: Utilize the IDE slash commands defined in `.agent/workflows/` (e.g., `/speckit-plan`, `/speckit-tasks`) for complex tasks like task extraction, planning, and implementation. Do not attempt to manually reference or run `.gemini/commands/*.toml` configuration files.
 7. **Workflow Namespacing**: The `speckit-` prefix in `.agent/workflows/` is a **strict namespace** reserved exclusively for Speckit configurations. Other workflows must either be namespace-free (e.g., `pr.md`) or use appropriate custom namespaces for logical grouping.
 8. **Pull Request Formatting**: You must NEVER use inline `--body` flags with `gh pr create` or `gh pr edit`. You MUST ALWAYS generate a properly formatted markdown file (e.g., `PR_BODY.md`) and use the `--body-file` flag to ensure high-quality, template-driven documentation. Clean up the body file immediately after execution.
