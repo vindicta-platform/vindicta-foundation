@@ -1,6 +1,6 @@
 # Feature Specification: dice-evaluator
 
-**Feature Branch**: `feat/dice-evaluator`  
+**Spec ID**: `003-dice-evaluator` | **Branch**: `feat/dice-evaluator`  
 **Created**: 2026-02-22  
 **Status**: Draft  
 **Input**: User description: "Dice Engine: Implement evaluator for parsed dice AST relying on dice-core (dice-evaluator)"

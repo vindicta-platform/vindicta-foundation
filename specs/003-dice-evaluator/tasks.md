@@ -1,6 +1,6 @@
 # Tasks: dice-evaluator
 
-**Input**: Design documents from `/specs/01-dice-evaluator/`
+**Input**: Design documents from `/specs/003-dice-evaluator/`
 **Prerequisites**: plan.md ✅, spec.md ✅, research.md ✅, data-model.md ✅, contracts/evaluator-api.md ✅
 
 **Tests**: Not explicitly requested in the feature specification. Test tasks are omitted.
