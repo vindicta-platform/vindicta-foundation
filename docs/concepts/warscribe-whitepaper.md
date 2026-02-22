@@ -4,7 +4,7 @@ The creation of a universal, rigorous wargaming notation system, designated here
 
 ## The Evolution of Formal Game Notations: Historical Precedents
 
-The development of WARScribe must be contextualized within the history of competitive game recording, where the move from narrative description to symbolic shorthand has always marked the professionalization of a discipline. Early chess literature, for instance, relied on lengthy prose to describe each move, which was prone to error and inhibited the preservation of strategic analysis. The transition to Algebraic Chess Notation (ACN) in the 18th century, popularized by Philip Stamma, revolutionized the field by assigning a unique coordinate (a–h for files, 1–8 for ranks) to every square.
+The development of WARScribe must be contextualized within the history of competitive game recording, where the move from narrative description to symbolic shorthand has always marked the professionalization of a discipline. Early chess literature, for instance, relied on lengthy prose to describe each move, which was prone to error and inhibited the preservation of strategic analysis. The foundation of Algebraic Chess Notation (ACN) was introduced by Philipp Stamma in 1737. His system revolutionized the field by assigning unique coordinates (a–h for files, 1–8 for ranks) to every square, though it was not widely adopted until the 19th and 20th centuries.
 
 ### Comparative Mechanics of Traditional Notations
 
