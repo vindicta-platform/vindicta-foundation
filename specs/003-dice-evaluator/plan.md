@@ -1,7 +1,7 @@
 # Implementation Plan: dice-evaluator
 
-**Branch**: `feat/dice-evaluator` | **Date**: 2026-02-22 | **Spec**: [spec.md](file:///c:/Users/bfoxt/Github/vindicta-platform/vindicta-foundation/.worktrees/dice-evaluator/specs/01-dice-evaluator/spec.md)
-**Input**: Feature specification from `/specs/01-dice-evaluator/spec.md`
+**Spec ID**: `003-dice-evaluator` | **Branch**: `feat/dice-evaluator` | **Date**: 2026-02-22 | **Spec**: [spec.md](./spec.md)
+**Input**: Feature specification from `/specs/003-dice-evaluator/spec.md`
 
 ## Summary
 
@@ -35,7 +35,7 @@ The dice-evaluator is an AST tree-walking evaluator that accepts strongly typed 
 ### Documentation (this feature)
 
 ```text
-specs/01-dice-evaluator/
+specs/003-dice-evaluator/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output
 ├── data-model.md        # Phase 1 output
