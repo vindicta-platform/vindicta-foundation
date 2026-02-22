@@ -56,7 +56,7 @@ As a consumer of the parser API, I need clear, typed errors when invalid dice no
 - **FR-003**: All AST node models MUST inherit from `VindictaModel`.
 - **FR-004**: System MUST provide descriptive, typed error messages for invalid input with position information.
 - **FR-005**: System MUST support modifiers: Keep Highest (`kh`), Drop Lowest (`dl`), Reroll (`r`), Exploding (`e`).
-- **FR-006**: System MUST support arithmetic operators (`+`, `-`, `*`) and grouping with parentheses.
+- **FR-006**: System MUST support arithmetic operators (`+`, `-`, `*`, `/`) and grouping with parentheses.
 - **FR-007**: System MUST produce deterministic AST output for identical input strings.
 
 ### Key Entities

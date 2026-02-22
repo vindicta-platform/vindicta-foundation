@@ -54,17 +54,18 @@ class RollResult(NamedTuple):
 
 The evaluator must handle the following node types from `dice-parser`:
 
-| Node Type               | Example Notation | Evaluation Behavior                           |
-| ----------------------- | ---------------- | --------------------------------------------- |
-| `DicePoolNode`          | `2d6`            | Call `roller.roll(sides=6, count=2)`          |
-| `BinaryOpNode` (add)    | `2d6 + 3`        | Evaluate left, evaluate right, sum            |
-| `BinaryOpNode` (sub)    | `2d6 - 1`        | Evaluate left, evaluate right, subtract       |
-| `BinaryOpNode` (mul)    | `2d6 * 2`        | Evaluate left, evaluate right, multiply       |
-| `BinaryOpNode` (div)    | `2d6 / 2`        | Evaluate left, evaluate right, integer divide |
-| `IntegerNode`           | `3`              | Return literal value                          |
-| `ModifiedDiceNode` (kh) | `2d20kh1`        | Roll pool, keep N highest                     |
-| `ModifiedDiceNode` (kl) | `4d6kl1`         | Roll pool, keep N lowest                      |
-| `ModifiedDiceNode` (dh) | `4d6dh1`         | Roll pool, drop N highest                     |
-| `ModifiedDiceNode` (dl) | `4d6dl1`         | Roll pool, drop N lowest                      |
-| `ModifiedDiceNode` (r)  | `1d6r1`          | Roll, reroll if matching condition            |
-| `ModifiedDiceNode` (e)  | `1d6e6`          | Roll, add extra roll on matching value        |
+| Node Type            | Example Notation | Evaluation Behavior                              |
+| -------------------- | ---------------- | ------------------------------------------------ |
+| `DicePoolNode`       | `2d6`            | Call `roller.roll(sides=6, count=2)`             |
+| `BinaryOpNode` (add) | `2d6 + 3`        | Evaluate left, evaluate right, sum               |
+| `BinaryOpNode` (sub) | `2d6 - 1`        | Evaluate left, evaluate right, subtract          |
+| `BinaryOpNode` (mul) | `2d6 * 2`        | Evaluate left, evaluate right, multiply          |
+| `BinaryOpNode` (div) | `2d6 / 2`        | Evaluate left, evaluate right, integer divide    |
+| `UnaryOpNode` (neg)  | `-3`             | Evaluate operand, negate result                  |
+| `IntegerNode`        | `3`              | Return literal value                             |
+| `ModifierNode` (kh)  | `2d20kh1`        | Roll pool, keep N highest                        |
+| `ModifierNode` (kl)  | `4d6kl1`         | Roll pool, keep N lowest                         |
+| `ModifierNode` (dh)  | `4d6dh1`         | Roll pool, drop N highest                        |
+| `ModifierNode` (dl)  | `4d6dl1`         | Roll pool, drop N lowest                         |
+| `ModifierNode` (r)   | `1d6r1`          | Roll, reroll if matching condition               |
+| `ModifierNode` (e)   | `1d6e6`          | Roll, add extra roll on matching value (explode) |
