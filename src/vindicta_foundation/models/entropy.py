@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Literal
 from uuid import UUID, uuid4
 from pydantic import Field, field_validator
@@ -16,7 +16,8 @@ class EntropyProof(VindictaModel):
 
     seed_hash: str = Field(..., description="SHA-256 hash of the entropy seed")
     timestamp: datetime = Field(
-        default_factory=datetime.utcnow, description="Time of entropy generation"
+        default_factory=lambda: datetime.now(timezone.utc),
+        description="Time of entropy generation",
     )
     algorithm: Literal["csprng", "rejection_sampling"] = Field(
         default="csprng", description="The method used to generate entropy"

@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from uuid import UUID, uuid4
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -16,14 +16,14 @@ class VindictaModel(BaseModel):
         populate_by_name=True,
         frozen=False,
         validate_assignment=True,
-        json_encoders={UUID: str, datetime: lambda v: v.isoformat()},
     )
 
     id: UUID = Field(
         default_factory=uuid4, description="Unique identifier for the entity"
     )
     created_at: datetime = Field(
-        default_factory=datetime.utcnow, description="Timestamp of creation"
+        default_factory=lambda: datetime.now(timezone.utc),
+        description="Timestamp of creation",
     )
     updated_at: datetime | None = Field(
         default=None, description="Timestamp of last update"

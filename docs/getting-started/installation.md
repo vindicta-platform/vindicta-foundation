@@ -24,6 +24,20 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 ---
 
+## Devcontainer (Recommended)
+
+The simplest way to get started. Requires Docker Desktop.
+
+```bash
+git clone https://github.com/vindicta-platform/vindicta-foundation.git
+cd vindicta-foundation
+# Open in your IDE and select "Reopen in Container"
+# Or use the CLI:
+npx -y @devcontainers/cli up --workspace-folder .
+```
+
+This installs Python 3.12, `uv`, and all project dependencies automatically.
+
 ## Component Installation
 
 ### The Engine (Physics & Simulation)
@@ -95,3 +109,20 @@ lsof -i :8000
 # or on Windows
 netstat -ano | findstr :8000
 ```
+
+### Devcontainer hangs or `uv sync` permission denied
+
+A stale `.venv` directory owned by root from a previous Docker run can block `uv sync`:
+
+```bash
+# Remove the stale .venv using Docker (runs as root)
+docker run --rm -v ${PWD}:/ws -w /ws python:3.12-bookworm rm -rf .venv
+# Then rebuild the devcontainer
+```
+
+If the devcontainer appears to hang with no output, use the open-source CLI to surface the real error:
+
+```bash
+npx -y @devcontainers/cli up --workspace-folder .
+```
+

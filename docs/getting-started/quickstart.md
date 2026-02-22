@@ -11,7 +11,21 @@ Get Vindicta running in 5 minutes.
 - Docker & Docker Compose (for full platform)
 - A terminal
 
-## Option 1: The Engine (Simulation)
+## Option 1: Devcontainer (Recommended)
+
+The fastest path. Requires Docker Desktop and a devcontainer-capable IDE (VS Code, Antigravity, etc.).
+
+```bash
+git clone https://github.com/vindicta-platform/vindicta-foundation.git
+cd vindicta-foundation
+# Open in IDE → "Reopen in Container"
+# Or from CLI:
+npx -y @devcontainers/cli up --workspace-folder .
+```
+
+Everything is installed automatically: Python 3.12, `uv`, and all project dependencies.
+
+## Option 2: The Engine (Simulation)
 
 The `vindicta-engine` handles all mechanics, dice resolution, and physics.
 
@@ -26,7 +40,7 @@ source .venv/bin/activate
 # or `uv run pytest` directly
 ```
 
-## Option 2: Full Platform (Docker)
+## Option 3: Full Platform (Docker)
 
 Run the entire suite (Portal, Engine, Oracle) locally using Docker.
 
@@ -42,7 +56,7 @@ docker-compose up -d
 # Open http://localhost:3000
 ```
 
-## Option 3: Interface Only (Platform Web)
+## Option 4: Interface Only (Platform Web)
 
 If you only want to work on the frontend portals:
 
