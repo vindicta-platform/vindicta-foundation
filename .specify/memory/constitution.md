@@ -1,20 +1,12 @@
 <!--
 Sync Impact Report:
-- Version change: N/A → 1.0.0
+- Version change: 1.0.0 → 1.1.0
 - List of modified principles:
-  - Initialized from template
+  - VI. Speckit Integration: Updated tool reference from .gemini/commands/ to .agent/workflows/
 - Added sections:
-  - II. Model Integrity
-  - III. Meso-Repo Consolidation
-  - IV. Documentation Discipline
-  - V. Quality Mandates
-  - VI. Speckit Integration
-  - Additional Constraints
-  - Development Workflow
+  - VII. Specification Directory Convention
 - Templates requiring updates:
-  - .specify/templates/plan-template.md (✅ updated - verified alignment)
-  - .specify/templates/spec-template.md (✅ updated - verified alignment)
-  - .specify/templates/tasks-template.md (✅ updated - verified alignment)
+  - None (templates already aligned with NNN-short-name convention)
 - Follow-up TODOs:
   - None
 -->
@@ -39,10 +31,29 @@ Architecture documentation is a living asset. Update the **C4 Model** in `docs/a
 We maintain a zero-compromise policy on quality.
 - **Coverage**: Minimum 90% test coverage required for all new code. Verify with `uv run pytest`.
 - **Types**: Strict type checking with `mypy` is mandatory.
-- **Linting**: All code must pass `ruff` checks for style and best practices.
+- **Linting**: All code must pass `ruff check .` AND `ruff format --check .`.
 
 ### VI. Speckit Integration
-Utilize local Speckit tools (`.gemini/commands/`) for task decomposition, planning, and implementation. Ensure cross-artifact consistency by running `/speckit-analyze` regularly. The "Builder Law" is enforced by these tools to maintain systemic integrity.
+Utilize the IDE slash commands defined in `.agent/workflows/` (e.g., `/speckit-plan`, `/speckit-tasks`, `/speckit-specify`) for task decomposition, planning, and implementation. The `speckit-` prefix is a **strict namespace** reserved exclusively for Speckit workflows. Ensure cross-artifact consistency by running `/speckit-analyze` regularly. The "Builder Law" is enforced by these tools to maintain systemic integrity.
+
+### VII. Specification Directory Convention (NON-NEGOTIABLE)
+All feature specifications MUST reside in `specs/NNN-short-name/` where:
+- **NNN**: A 3-digit zero-padded sequential number (e.g., `001`, `002`, `003`).
+- **short-name**: A 2-4 word kebab-case descriptor (e.g., `ocr-parser`, `dice-core`).
+- The `create-new-feature.ps1` script auto-assigns the next available number.
+- Never nest spec directories (e.g., `specs/feat/name/` is **forbidden**).
+
+Each feature directory MUST contain at minimum:
+- `spec.md` — Functional specification (created by `/speckit-specify`)
+- `plan.md` — Implementation plan (created by `/speckit-plan`)
+- `tasks.md` — Task breakdown (created by `/speckit-tasks`)
+
+Optional artifacts per feature:
+- `research.md` — Technical research decisions
+- `data-model.md` — Entity and data model definitions
+- `quickstart.md` — Usage examples
+- `contracts/` — Interface contracts (APIs, grammars, schemas)
+- `checklists/` — Quality validation checklists
 
 ## Additional Constraints
 
@@ -61,4 +72,4 @@ Utilize local Speckit tools (`.gemini/commands/`) for task decomposition, planni
 ## Governance
 This constitution is governed by the Vindicta Platform's systemic logic and requires validation against Zero-Order Axioms. Evolution of these principles occurs via the Amendment Mechanism. All pull requests and architectural reviews must verify compliance with these Tier 2 laws.
 
-**Version**: 1.0.0 | **Ratified**: 2026-02-21 | **Last Amended**: 2026-02-21
+**Version**: 1.1.0 | **Ratified**: 2026-02-21 | **Last Amended**: 2026-02-22
