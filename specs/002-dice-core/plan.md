@@ -1,7 +1,7 @@
 # Implementation Plan: dice-core
 
-**Branch**: `feat/dice-core` | **Date**: 2026-02-22 | **Spec**: [spec.md](file:///c:/Users/bfoxt/Github/vindicta-platform/vindicta-foundation/.worktrees/dice-core/specs/01-dice-core/spec.md)  
-**Input**: Feature specification from `/specs/01-dice-core/spec.md`
+**Spec ID**: `002-dice-core` | **Branch**: `feat/dice-core` | **Date**: 2026-02-22 | **Spec**: [spec.md](./spec.md)  
+**Input**: Feature specification from `/specs/002-dice-core/spec.md`
 
 ## Summary
 
@@ -38,7 +38,7 @@ Implement a CSPRNG-backed dice engine with HMAC-SHA256 verifiable entropy proofs
 ### Documentation (this feature)
 
 ```text
-specs/01-dice-core/
+specs/002-dice-core/
 ├── spec.md              # Feature specification (input)
 ├── plan.md              # This file
 ├── research.md          # Phase 0: Technical decisions
@@ -74,9 +74,9 @@ tests/
 
 ## Generated Artifacts
 
-| Artifact         | Path                                  | Status     |
-| ---------------- | ------------------------------------- | ---------- |
-| research.md      | `specs/01-dice-core/research.md`      | ✅ Complete |
-| data-model.md    | `specs/01-dice-core/data-model.md`    | ✅ Complete |
-| contracts/api.md | `specs/01-dice-core/contracts/api.md` | ✅ Complete |
-| quickstart.md    | `specs/01-dice-core/quickstart.md`    | ✅ Complete |
+| Artifact         | Path                                   | Status     |
+| ---------------- | -------------------------------------- | ---------- |
+| research.md      | `specs/002-dice-core/research.md`      | ✅ Complete |
+| data-model.md    | `specs/002-dice-core/data-model.md`    | ✅ Complete |
+| contracts/api.md | `specs/002-dice-core/contracts/api.md` | ✅ Complete |
+| quickstart.md    | `specs/002-dice-core/quickstart.md`    | ✅ Complete |
