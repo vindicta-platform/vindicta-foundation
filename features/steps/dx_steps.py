@@ -45,7 +45,9 @@ def step_run_test_suite(context):
     context.test_exit_code = result.returncode
 
 
-@then("the output should be formatted with a progress bar and clear pass/fail indicators")
+@then(
+    "the output should be formatted with a progress bar and clear pass/fail indicators"
+)
 def step_check_output_format(context):
     assert context.test_exit_code == 0, (
         f"Test suite failed (exit code {context.test_exit_code}):\n{context.test_output}"
