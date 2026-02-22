@@ -1,7 +1,7 @@
 # Implementation Plan: dice-parser
 
-**Branch**: `feat/dice-parser` | **Date**: 2026-02-22 | **Spec**: [spec.md](../01-dice-parser/spec.md)
-**Input**: Feature specification from `/specs/01-dice-parser/spec.md`
+**Spec ID**: `004-dice-parser` | **Branch**: `feat/dice-parser` | **Date**: 2026-02-22 | **Spec**: [spec.md](./spec.md)
+**Input**: Feature specification from `/specs/004-dice-parser/spec.md`
 
 ## Summary
 
@@ -38,7 +38,7 @@ Implement a dice notation parser that translates standard wargaming dice express
 ### Documentation (this feature)
 
 ```text
-specs/feat/dice-parser/
+specs/004-dice-parser/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output — library research
 ├── data-model.md        # Phase 1 output — AST node schema
