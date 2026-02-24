@@ -29,6 +29,17 @@ class EntropyProof(VindictaModel):
     @field_validator("seed_hash")
     @classmethod
     def validate_seed_hash(cls, v: str) -> str:
+        """Validates that the provided seed hash is a valid SHA-256 digest.
+
+        Args:
+            v (str): The string value to validate.
+
+        Returns:
+            str: The validated SHA-256 string.
+
+        Raises:
+            ValueError: If the string is empty or less than 64 characters.
+        """
         if not v or len(v) < 64:
             raise ValueError("Invalid seed hash: must be SHA-256 hex digest")
         return v
