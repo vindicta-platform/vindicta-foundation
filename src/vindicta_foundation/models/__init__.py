@@ -18,9 +18,11 @@ from vindicta_foundation.models.evaluation import (
     ExecutionTrace,
     TraceStep,
 )
+from vindicta_foundation.models.rag import AgentQuery, RulesSegment
 
 __all__ = [
     "ASTNodeType",
+    "AgentQuery",
     "BinaryOpNode",
     "BinaryOperator",
     "DicePoolNode",
@@ -33,6 +35,7 @@ __all__ = [
     "ModifierType",
     "RandomResult",
     "RollEntropy",
+    "RulesSegment",
     "TraceStep",
     "UnaryOpNode",
     "UnaryOperator",
