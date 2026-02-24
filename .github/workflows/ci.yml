@@ -36,4 +36,9 @@ jobs:
       run: uv run pytest --cov=vindicta_foundation --cov-report=term-missing --cov-fail-under=90 -n auto
       
     - name: Behavior Check with behave
-      run: uv run behave
+      run: |
+        uv run behave
+
+    - name: Check Docs Build
+      run: |
+        uv run mkdocs build --strict
