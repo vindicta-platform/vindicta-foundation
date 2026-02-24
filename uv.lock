@@ -3950,6 +3950,7 @@ name = "vindicta-foundation"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "lark" },
     { name = "pydantic" },
 ]
 
@@ -3977,7 +3978,10 @@ rag = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "behave" },
+    { name = "pytest-cov" },
     { name = "pytest-sugar" },
+    { name = "pytest-xdist" },
 ]
 
 [package.metadata]
@@ -3985,6 +3989,7 @@ requires-dist = [
     { name = "behave", marker = "extra == 'dev'", specifier = ">=1.2.6" },
     { name = "chromadb", marker = "extra == 'rag'", specifier = ">=0.5.0" },
     { name = "crawl4ai", marker = "extra == 'rag'", specifier = ">=0.4.0" },
+    { name = "lark", specifier = ">=1.2.0" },
     { name = "mcp", marker = "extra == 'rag'", specifier = ">=1.0.0" },
     { name = "mike", marker = "extra == 'dev'" },
     { name = "mkdocs-macros-plugin", marker = "extra == 'dev'" },
@@ -4003,7 +4008,12 @@ requires-dist = [
 provides-extras = ["rag", "dev"]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pytest-sugar", specifier = ">=1.1.1" }]
+dev = [
+    { name = "behave", specifier = ">=1.2.6" },
+    { name = "pytest-cov", specifier = ">=6.0.0" },
+    { name = "pytest-sugar", specifier = ">=1.1.1" },
+    { name = "pytest-xdist", specifier = ">=3.5.0" },
+]
 
 [[package]]
 name = "virtualenv"
