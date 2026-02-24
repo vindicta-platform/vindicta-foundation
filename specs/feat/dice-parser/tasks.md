@@ -17,10 +17,10 @@
 
 **Purpose**: Project initialization, dependency installation, and skeleton creation
 
-- [ ] T001 Add `lark>=1.2.0` dependency to `pyproject.toml` and run `uv lock`
-- [ ] T002 Create parser package skeleton at `src/vindicta_foundation/parser/__init__.py`
-- [ ] T003 [P] Create error module at `src/vindicta_foundation/parser/errors.py` with `DiceParserError`, `ParseError`, and `InvalidDiceNotationError`
-- [ ] T004 [P] Create grammar module at `src/vindicta_foundation/parser/grammar.py` with the Lark EBNF grammar string from `contracts/grammar.ebnf`
+- [X] T001 Add `lark>=1.2.0` dependency to `pyproject.toml` and run `uv lock`
+- [X] T002 Create parser package skeleton at `src/vindicta_foundation/parser/__init__.py`
+- [X] T003 [P] Create error module at `src/vindicta_foundation/parser/errors.py` with `DiceParserError`, `ParseError`, and `InvalidDiceNotationError`
+- [X] T004 [P] Create grammar module at `src/vindicta_foundation/parser/grammar.py` with the Lark EBNF grammar string from `contracts/grammar.ebnf`
 
 ---
 
@@ -30,9 +30,9 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Create AST node models and enums in `src/vindicta_foundation/models/dice_ast.py`: `BinaryOperator`, `UnaryOperator`, `ModifierType` enums; `IntegerNode`, `DicePoolNode`, `BinaryOpNode`, `UnaryOpNode`, `ModifierNode` Pydantic models inheriting from `VindictaModel`; and `ASTNodeType` discriminated union
-- [ ] T006 Update `src/vindicta_foundation/models/__init__.py` to export all new AST models and enums
-- [ ] T007 Create AST model unit tests in `tests/test_dice_ast.py`: construction, validation (count≥1, sides≥1, value≥1), serialization round-trip via `model_dump_json()`/`model_validate_json()`, and discriminated union deserialization
+- [X] T005 Create AST node models and enums in `src/vindicta_foundation/models/dice_ast.py`: `BinaryOperator`, `UnaryOperator`, `ModifierType` enums; `IntegerNode`, `DicePoolNode`, `BinaryOpNode`, `UnaryOpNode`, `ModifierNode` Pydantic models inheriting from `VindictaModel`; and `ASTNodeType` discriminated union
+- [X] T006 Update `src/vindicta_foundation/models/__init__.py` to export all new AST models and enums
+- [X] T007 Create AST model unit tests in `tests/test_dice_ast.py`: construction, validation (count≥1, sides≥1, value≥1), serialization round-trip via `model_dump_json()`/`model_validate_json()`, and discriminated union deserialization
 
 **Checkpoint**: AST models are fully defined, exported, tested, and serialize/deserialize correctly
 
@@ -46,10 +46,10 @@
 
 ### Implementation for User Story 1
 
-- [ ] T008 [US1] Implement Lark Transformer in `src/vindicta_foundation/parser/transformer.py`: convert parse tree to AST nodes for rules `integer`, `dice`, `add`, `sub`, `mul`, `div`, `neg`, `pos`
-- [ ] T009 [US1] Implement public `parse_dice()` function in `src/vindicta_foundation/parser/__init__.py`: instantiate Lark parser with grammar, apply Transformer, wrap Lark exceptions in `ParseError`
-- [ ] T010 [P] [US1] Create parser tests in `tests/test_parser.py`: parametrized tests for `"3d6"`, `"2d6 + 4"`, `"1d20"`, `"2d6 + 1d4 * 3"` (precedence), `"(2d6 + 3) * 2"` (grouping), `"-3"` (unary), integer-only expressions
-- [ ] T011 [P] [US1] Create error tests in `tests/test_parser_errors.py`: parametrized tests for empty string, `"abc"`, `"2d"`, `"d6"`, `"++"`, `"2d6 +"` (trailing operator), and other malformed inputs asserting `ParseError` with descriptive messages
+- [X] T008 [US1] Implement Lark Transformer in `src/vindicta_foundation/parser/transformer.py`: convert parse tree to AST nodes for rules `integer`, `dice`, `add`, `sub`, `mul`, `div`, `neg`, `pos`
+- [X] T009 [US1] Implement public `parse_dice()` function in `src/vindicta_foundation/parser/__init__.py`: instantiate Lark parser with grammar, apply Transformer, wrap Lark exceptions in `ParseError`
+- [X] T010 [P] [US1] Create parser tests in `tests/test_parser.py`: parametrized tests for `"3d6"`, `"2d6 + 4"`, `"1d20"`, `"2d6 + 1d4 * 3"` (precedence), `"(2d6 + 3) * 2"` (grouping), `"-3"` (unary), integer-only expressions
+- [X] T011 [P] [US1] Create error tests in `tests/test_parser_errors.py`: parametrized tests for empty string, `"abc"`, `"2d"`, `"d6"`, `"++"`, `"2d6 +"` (trailing operator), and other malformed inputs asserting `ParseError` with descriptive messages
 
 **Checkpoint**: Parser handles all basic dice + arithmetic expressions, rejects malformed input with typed errors
 
@@ -63,9 +63,9 @@
 
 ### Implementation for User Story 2
 
-- [ ] T012 [US2] Extend Transformer in `src/vindicta_foundation/parser/transformer.py` with modifier rules: `keep_highest`, `keep_lowest`, `drop_highest`, `drop_lowest`, `explode`, and `modified_dice` handler
-- [ ] T013 [P] [US2] Add modifier parser tests in `tests/test_parser.py`: parametrized tests for `"4d6dl1"`, `"4d6kh3"`, `"2d20kl1"`, `"4d6dh1"`, `"1d10e10"`, and modifier combined with arithmetic (e.g., `"4d6dl1 + 2"`)
-- [ ] T014 [P] [US2] Add modifier error tests in `tests/test_parser_errors.py`: `"4d6kh"` (missing value), `"kh3"` (modifier without dice), and other malformed modifier inputs
+- [X] T012 [US2] Extend Transformer in `src/vindicta_foundation/parser/transformer.py` with modifier rules: `keep_highest`, `keep_lowest`, `drop_highest`, `drop_lowest`, `explode`, and `modified_dice` handler
+- [X] T013 [P] [US2] Add modifier parser tests in `tests/test_parser.py`: parametrized tests for `"4d6dl1"`, `"4d6kh3"`, `"2d20kl1"`, `"4d6dh1"`, `"1d10e10"`, and modifier combined with arithmetic (e.g., `"4d6dl1 + 2"`)
+- [X] T014 [P] [US2] Add modifier error tests in `tests/test_parser_errors.py`: `"4d6kh"` (missing value), `"kh3"` (modifier without dice), and other malformed modifier inputs
 
 **Checkpoint**: Full modifier support working; all 6 modifiers (kh, kl, dh, dl, e) parse correctly
 
@@ -75,11 +75,11 @@
 
 **Purpose**: Quality gates, performance validation, and documentation
 
-- [ ] T015 [P] Run `uv run pytest --cov=vindicta_foundation --cov-report=term-missing` and verify ≥90% coverage on `parser/` and `models/dice_ast.py`
-- [ ] T016 [P] Run `uv run mypy src/vindicta_foundation/parser/ src/vindicta_foundation/models/dice_ast.py --strict` and fix any type errors
-- [ ] T017 [P] Run `ruff check .` and `ruff format --check .` to verify linting and formatting
-- [ ] T018 Add performance smoke test in `tests/test_parser.py`: parse 1000 iterations of `"4d6dl1 + 2d8kh1 * 3"` and assert average < 1ms per SC-003
-- [ ] T019 Run quickstart.md validation: execute all code examples from `quickstart.md` in a test or script to confirm accuracy
+- [X] T015 [P] Run `uv run pytest --cov=vindicta_foundation --cov-report=term-missing` and verify ≥90% coverage on `parser/` and `models/dice_ast.py`
+- [X] T016 [P] Run `uv run mypy src/vindicta_foundation/parser/ src/vindicta_foundation/models/dice_ast.py --strict` and fix any type errors
+- [X] T017 [P] Run `ruff check .` and `ruff format --check .` to verify linting and formatting
+- [X] T018 Add performance smoke test in `tests/test_parser.py`: parse 1000 iterations of `"4d6dl1 + 2d8kh1 * 3"` and assert average < 1ms per SC-003
+- [X] T019 Run quickstart.md validation: execute all code examples from `quickstart.md` in a test or script to confirm accuracy
 
 ---
 
