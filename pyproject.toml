@@ -46,4 +46,6 @@ addopts = "--cov=vindicta_foundation --cov-report=term-missing"
 [dependency-groups]
 dev = [
     "pytest-sugar>=1.1.1",
+    "pytest-cov>=6.0.0",
+    "pytest-xdist>=3.5.0",
 ]
