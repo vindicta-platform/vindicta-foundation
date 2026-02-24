@@ -61,6 +61,13 @@ nav:
       - ADR-0004 API Versioning: architecture/adr/0004-api-versioning-strategy.md
       - ADR-0005 Consolidation: architecture/adr/0005-consolidation.md
       - ADR-0006 Consolidation Tactics: architecture/adr/0006-consolidation-tactics.md
+      - ADR-0007 Just Command Runner: architecture/adr/0007-just-command-runner.md
+      - ADR-0008 Minimal Devcontainer: architecture/adr/0008-minimal-devcontainer.md
+      - ADR-0009 MCP Client Injection: architecture/adr/0009-mcp-client-injection-pattern.md
+      - ADR-0010 MCP Context Limits: architecture/adr/0010-mcp-context-window-defaults.md
+      - ADR-0011 Adopt MCP Standard: architecture/adr/0011-adopt-model-context-protocol.md
+      - ADR-0012 Local-First RAG: architecture/adr/0012-local-first-offline-rag.md
+      - ADR-0013 Hash Idempotency: architecture/adr/0013-idempotent-markdown-hashing.md
   - Getting Started:
     - Quick Start: getting-started/quickstart.md
     - Installation: getting-started/installation.md
