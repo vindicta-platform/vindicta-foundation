@@ -40,4 +40,3 @@
 - [X] Validate 90% test coverage using `uv run pytest`.
 - [X] Run `ruff check .` and `ruff format --check .` to ensure compliance.
 - [X] Run `mypy` strict type checking across the entire `vindicta_foundation` module.
-
