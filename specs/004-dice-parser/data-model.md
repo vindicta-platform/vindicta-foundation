@@ -158,6 +158,7 @@ class ModifierType(str, Enum):
     DROP_HIGHEST = "drop_highest"
     DROP_LOWEST = "drop_lowest"
     EXPLODE = "explode"
+    REROLL = "reroll"
 ```
 
 ## Discriminated Union
