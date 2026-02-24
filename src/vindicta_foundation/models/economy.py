@@ -21,12 +21,21 @@ class GasTankState(VindictaModel):
 
     @property
     def is_empty(self) -> bool:
-        """Returns True if the tank has no funds remaining."""
+        """Determines if the gas tank has no remaining funds.
+
+        Returns:
+            bool: True if the balance is less than or equal to 0.0, False otherwise.
+        """
         return self.balance_usd <= 0.0
 
     @property
     def is_low(self) -> bool:
-        """Returns True if the tank is below 10% capacity."""
+        """Determines if the gas tank is below 10% capacity relative to its limit.
+
+        Returns:
+            bool: True if the balance is less than 10% of the limit or if the \
+                limit is 0 or less, False otherwise.
+        """
         if self.limit_usd <= 0:
             return True
         return self.balance_usd < (self.limit_usd * 0.1)
