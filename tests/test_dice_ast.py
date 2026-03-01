@@ -94,7 +94,7 @@ class TestSerialization:
     """JSON round-trip tests (SC-004)."""
 
     def test_simple_integer_round_trip(self) -> None:
-        adapter = TypeAdapter(ASTNodeType)
+        adapter: TypeAdapter[ASTNodeType] = TypeAdapter(ASTNodeType)
         node = IntegerNode(value=42)
         json_str = node.model_dump_json()
         restored = adapter.validate_json(json_str)
@@ -102,7 +102,7 @@ class TestSerialization:
         assert restored.value == 42
 
     def test_dice_pool_round_trip(self) -> None:
-        adapter = TypeAdapter(ASTNodeType)
+        adapter: TypeAdapter[ASTNodeType] = TypeAdapter(ASTNodeType)
         node = DicePoolNode(count=3, sides=6)
         json_str = node.model_dump_json()
         restored = adapter.validate_json(json_str)
@@ -112,7 +112,7 @@ class TestSerialization:
 
     def test_nested_binary_op_round_trip(self) -> None:
         """Test 2d6 + 3 serialization round-trip."""
-        adapter = TypeAdapter(ASTNodeType)
+        adapter: TypeAdapter[ASTNodeType] = TypeAdapter(ASTNodeType)
         node = BinaryOpNode(
             operator=BinaryOperator.ADD,
             left=DicePoolNode(count=2, sides=6),
@@ -124,7 +124,7 @@ class TestSerialization:
         assert restored.operator == BinaryOperator.ADD
 
     def test_modifier_round_trip(self) -> None:
-        adapter = TypeAdapter(ASTNodeType)
+        adapter: TypeAdapter[ASTNodeType] = TypeAdapter(ASTNodeType)
         node = ModifierNode(
             modifier_type=ModifierType.KEEP_HIGHEST,
             value=3,
@@ -137,7 +137,7 @@ class TestSerialization:
 
     def test_discriminated_union_deserialization(self) -> None:
         """Verify that JSON with node_type field deserializes to correct type."""
-        adapter = TypeAdapter(ASTNodeType)
+        adapter: TypeAdapter[ASTNodeType] = TypeAdapter(ASTNodeType)
         json_str = '{"node_type": "integer", "value": 7, "id": "00000000-0000-0000-0000-000000000001", "created_at": "2026-01-01T00:00:00Z", "updated_at": null}'
         restored = adapter.validate_json(json_str)
         assert isinstance(restored, IntegerNode)
