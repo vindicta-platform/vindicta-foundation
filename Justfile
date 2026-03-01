@@ -13,7 +13,7 @@ lint:
 
 # Serve the documentation locally
 docs:
-    uv run mkdocs serve
+    $env:NO_MKDOCS_2_WARNING="1"; uv run mkdocs serve
 
 # Sync current environment
 sync:

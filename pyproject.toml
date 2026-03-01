@@ -1,6 +1,6 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "vindicta-foundation"
@@ -20,27 +20,17 @@ rag = [
     "ollama>=0.4.0",
     "mcp>=1.0.0",
 ]
-dev = [
-    "mypy>=1.0.0",
-    "ruff>=0.1.0",
-    "pytest>=8.0.0",
-    "pytest-cov>=4.1.0",
-    "behave>=1.2.6",
-    "pre-commit",
-    "pytest-xdist",
-    "pytest-mock",
-    "mkdocs-material",
-    "mkdocs-macros-plugin",
-    "mike",
-    "towncrier",
-]
 
-[tool.hatch.build.targets.wheel]
-packages = ["src/vindicta_foundation"]
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.mypy]
 strict = true
 python_version = "3.12"
+
+[[tool.mypy.overrides]]
+module = "behave.*"
+ignore_missing_imports = true
 
 [tool.ruff]
 line-length = 88
@@ -59,10 +49,19 @@ addopts = "--cov=vindicta_foundation --cov-report=term-missing"
 
 [dependency-groups]
 dev = [
-    "pytest-sugar>=1.1.1",
+    "mypy>=1.0.0",
+    "ruff>=0.1.0",
+    "pytest>=8.0.0",
     "pytest-cov>=6.0.0",
-    "behave>=1.2.6",
+    "pytest-sugar>=1.1.1",
     "pytest-xdist>=3.5.0",
+    "pytest-mock",
+    "behave>=1.2.6",
+    "pre-commit",
+    "mkdocs-material",
+    "mkdocs-macros-plugin",
+    "mike",
+    "towncrier",
 ]
 
 [tool.coverage.run]
