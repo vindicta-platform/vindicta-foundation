@@ -1,5 +1,8 @@
 # Vindicta Foundation
 
+> 📢 **Notice:** This repository is a Component Submodule of the Vindicta Platform Monorepo. For local development, testing, and dependency resolution, please clone the root [vindicta-platform](https://github.com/vindicta-platform/vindicta-platform) repository.
+
+
 The **central hub** and **core pillar** of the [Vindicta Platform](https://github.com/vindicta-platform). This repository provides the axiomatic base models, shared kernel logic, and constitutional documentation that all other Vindicta microservices, agents, and clients depend upon.
 
 ---
