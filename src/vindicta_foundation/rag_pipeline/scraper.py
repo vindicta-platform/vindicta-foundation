@@ -154,7 +154,7 @@ async def scrape_url(
 
     # Default: use crawl4ai
     try:
-        from crawl4ai import AsyncWebCrawler  # type: ignore[import-untyped]
+        from crawl4ai import AsyncWebCrawler
 
         async with AsyncWebCrawler() as web_crawler:
             result = await web_crawler.arun(url=url)

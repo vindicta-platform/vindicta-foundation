@@ -25,4 +25,6 @@ class DiceRoller(Protocol):
     dice-core implementation directly (R2).
     """
 
-    def roll(self, sides: int, count: int = 1) -> RollResult: ...
+    def roll(self, sides: int, count: int = 1) -> RollResult:
+        """Roll a dice with the given sides and count."""
+        ...
