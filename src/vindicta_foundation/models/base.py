@@ -4,8 +4,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 class VindictaModel(BaseModel):
-    """
-    Base model for all Vindicta Platform entities.
+    """Base model for all Vindicta Platform entities.
 
     Constitutional Compliance:
     - Rule VII: All models must be strictly typed and serializable.
