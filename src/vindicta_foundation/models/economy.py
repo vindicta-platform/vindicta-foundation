@@ -4,8 +4,7 @@ from vindicta_foundation.models.base import VindictaModel
 
 
 class GasTankState(VindictaModel):
-    """
-    Tracks the economic state of the platform to prevent runaway AI costs.
+    """Tracks the economic state of the platform to prevent runaway AI costs.
 
     Constitutional Compliance:
     - Rule II: Gas Tank Model must enforce hard limits on API spend.

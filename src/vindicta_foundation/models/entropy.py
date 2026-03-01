@@ -7,8 +7,7 @@ from vindicta_foundation.models.base import VindictaModel
 
 
 class EntropyProof(VindictaModel):
-    """
-    Cryptographically verifiable proof for mechanical actions.
+    """Cryptographically verifiable proof for mechanical actions.
 
     Constitutional Compliance:
     - Rule VII: No probabilistic AI. All randomness must be traceable.
