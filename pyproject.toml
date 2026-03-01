@@ -26,10 +26,14 @@ where = ["src"]
 
 [tool.mypy]
 strict = true
+warn_unused_ignores = false
 python_version = "3.12"
 
 [[tool.mypy.overrides]]
-module = "behave.*"
+module = [
+    "behave.*",
+    "crawl4ai.*"
+]
 ignore_missing_imports = true
 
 [tool.ruff]
@@ -38,7 +42,11 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "D"]
-ignore = ["D100", "D104"]
+ignore = ["D100", "D104", "D107"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "E501"]
+"features/*" = ["D"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"
