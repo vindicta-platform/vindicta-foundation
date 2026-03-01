@@ -156,55 +156,48 @@ uv.lock
 .uv/
 .coverage
 .coverage.*
-htmlcov/
+.cache
+.status
 .pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.github/PR_BODY.md
-PR_BODY.md
-ISSUE_BODY.md
-.worktrees/
-node_modules/
-.venv/
-.env/
-vendor/
-__pycache__/
-bower_components/
-jspm_packages/
-.cache/
-*.pyc
-*.pyo
-*.pyd
-*.o
-*.obj
-*.dll
-*.exe
-*.a
-*.lib
-*.class
-*.jar
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-poetry.lock
-Pipfile.lock
-search_index.json
+*.manifest
+*.spec
+test_results.txt
+ruff.txt
+
+# Misc
+*.bak
+*.orig
+*.swp
+*~
 .DS_Store
-*.min.js
-*.min.css
-*.js.map
-*.css.map
-*.woff
-*.woff2
-*.ttf
-*.eot
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.ico
-*.svg
-repomix-*.md
+Thumbs.db
+
+# Tools
+.pdm-python
+.ruff_cache/
+
+# Docs
+/site/
+
+# Data
+chroma_data/
+data/raw/
+data/processed/
+*.sqlite3
+
+# Speckit
+.specify/cache/
+.specify/tmp/
+.specify/*.log
+
+# MkDocs
+site/
+
+# Node / tooling
+node_modules/
+package-lock.json
+
+# Repomix
 repomix-*.txt
 repomix-*.xml
 assets/javascripts/
