@@ -22,8 +22,8 @@ def test_gas_tank_state_logic() -> None:
 def test_gas_tank_defaults() -> None:
     """Test the default instantiation of GasTankState."""
     tank = GasTankState(balance_usd=0.0, limit_usd=0.0, is_active=True)
-    assert tank.balance_usd == 0.0
-    assert tank.limit_usd == 0.0
+    assert tank.balance_usd == pytest.approx(0.0)
+    assert tank.limit_usd == pytest.approx(0.0)
     assert tank.is_active is True
     assert tank.is_empty is True
     assert tank.is_low is True
