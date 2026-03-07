@@ -50,7 +50,7 @@ def step_run_test_suite(context):
 )
 def step_check_output_format(context):
     assert context.test_exit_code == 0, (
-        f"Test suite failed (exit code {context.test_exit_code}):\n{context.test_output}"  # noqa: E501
+        f"Test suite failed (exit code {context.test_exit_code}):\n{context.test_output}"
     )
     output_upper = context.test_output.upper()
     assert "PASSED" in output_upper or "passed" in context.test_output, (
