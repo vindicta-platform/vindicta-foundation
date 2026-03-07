@@ -17,9 +17,9 @@
 
 **Purpose**: Project initialization, module scaffolding, and error types
 
-- [X] T001 Create dice module package at `src/vindicta_foundation/dice/__init__.py` with public re-exports
-- [X] T002 [P] Create error types in `src/vindicta_foundation/dice/errors.py` (SecurityError)
-- [X] T003 [P] Create `RngMode` enum in `src/vindicta_foundation/dice/types.py`
+- [ ] T001 Create dice module package at `src/vindicta_foundation/dice/__init__.py` with public re-exports
+- [ ] T002 [P] Create error types in `src/vindicta_foundation/dice/errors.py` (SecurityError)
+- [ ] T003 [P] Create `RngMode` enum in `src/vindicta_foundation/dice/types.py`
 
 ---
 
@@ -29,10 +29,10 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [X] T004 Implement `RollEntropy` model in `src/vindicta_foundation/dice/types.py` inheriting from `VindictaModel` with seed, commitment, algorithm, context fields, `verify()` and `reveal()` methods
-- [X] T005 Implement `RandomResult` model in `src/vindicta_foundation/dice/types.py` inheriting from `VindictaModel` with values, lower_bound, upper_bound, entropy fields, `verify()` method, and field validators
-- [X] T006 Update `src/vindicta_foundation/dice/__init__.py` to export `RollEntropy`, `RandomResult`, `RngMode`, `SecurityError`
-- [X] T007 Update `src/vindicta_foundation/models/__init__.py` to add `RollEntropy` and `RandomResult` to `__all__` exports
+- [ ] T004 Implement `RollEntropy` model in `src/vindicta_foundation/dice/types.py` inheriting from `VindictaModel` with seed, commitment, algorithm, context fields, `verify()` and `reveal()` methods
+- [ ] T005 Implement `RandomResult` model in `src/vindicta_foundation/dice/types.py` inheriting from `VindictaModel` with values, lower_bound, upper_bound, entropy fields, `verify()` method, and field validators
+- [ ] T006 Update `src/vindicta_foundation/dice/__init__.py` to export `RollEntropy`, `RandomResult`, `RngMode`, `SecurityError`
+- [ ] T007 Update `src/vindicta_foundation/models/__init__.py` to add `RollEntropy` and `RandomResult` to `__all__` exports
 
 **Checkpoint**: Foundation models ready — DiceEngine implementation can begin
 
@@ -46,12 +46,12 @@
 
 ### Implementation for User Story 1
 
-- [X] T008 [US1] Implement `CsprngEngine` class in `src/vindicta_foundation/dice/engine.py` with `roll(lower, upper, count, context)` method using `secrets.randbelow()` for random generation and HMAC-SHA256 for commitment
-- [X] T009 [US1] Implement `DeterministicEngine` class in `src/vindicta_foundation/dice/engine.py` using `random.Random(seed)` for reproducible testing
-- [X] T010 [US1] Implement `create_engine(mode, seed)` factory function in `src/vindicta_foundation/dice/engine.py` with production/testing mode guard (raises `SecurityError` if seed provided in PRODUCTION mode)
-- [X] T011 [US1] Update `src/vindicta_foundation/dice/__init__.py` to export `create_engine`
-- [X] T012 [US1] Write unit tests in `tests/test_dice_engine.py`: roll returns values in range, roll count matches, deterministic engine with same seed produces same results, production mode rejects seed, roll with count=1 and count=N
-- [X] T013 [US1] Write statistical validation test in `tests/test_dice_engine.py`: chi-square uniformity test over 10,000 d6 rolls with p > 0.01
+- [ ] T008 [US1] Implement `CsprngEngine` class in `src/vindicta_foundation/dice/engine.py` with `roll(lower, upper, count, context)` method using `secrets.randbelow()` for random generation and HMAC-SHA256 for commitment
+- [ ] T009 [US1] Implement `DeterministicEngine` class in `src/vindicta_foundation/dice/engine.py` using `random.Random(seed)` for reproducible testing
+- [ ] T010 [US1] Implement `create_engine(mode, seed)` factory function in `src/vindicta_foundation/dice/engine.py` with production/testing mode guard (raises `SecurityError` if seed provided in PRODUCTION mode)
+- [ ] T011 [US1] Update `src/vindicta_foundation/dice/__init__.py` to export `create_engine`
+- [ ] T012 [US1] Write unit tests in `tests/test_dice_engine.py`: roll returns values in range, roll count matches, deterministic engine with same seed produces same results, production mode rejects seed, roll with count=1 and count=N
+- [ ] T013 [US1] Write statistical validation test in `tests/test_dice_engine.py`: chi-square uniformity test over 10,000 d6 rolls with p > 0.01
 
 **Checkpoint**: At this point, `create_engine().roll(1, 6)` produces cryptographically secure random results. User Story 1 is fully functional and independently testable.
 
@@ -65,8 +65,8 @@
 
 ### Implementation for User Story 2
 
-- [X] T014 [US2] Write verification tests in `tests/test_dice_verification.py`: `result.verify()` returns True for untampered results, `result.verify()` returns False when commitment is altered, `RollEntropy.reveal()` returns hex-encoded seed, independent HMAC recomputation matches commitment
-- [X] T015 [US2] Write auditor integration test in `tests/test_dice_verification.py`: full commit-reveal-verify cycle — generate roll, extract seed via `reveal()`, recompute HMAC with `hmac.new(seed_bytes, context, sha256)`, assert matches `entropy.commitment`
+- [ ] T014 [US2] Write verification tests in `tests/test_dice_verification.py`: `result.verify()` returns True for untampered results, `result.verify()` returns False when commitment is altered, `RollEntropy.reveal()` returns hex-encoded seed, independent HMAC recomputation matches commitment
+- [ ] T015 [US2] Write auditor integration test in `tests/test_dice_verification.py`: full commit-reveal-verify cycle — generate roll, extract seed via `reveal()`, recompute HMAC with `hmac.new(seed_bytes, context, sha256)`, assert matches `entropy.commitment`
 
 **Checkpoint**: At this point, every roll is cryptographically verifiable. An external auditor can independently confirm roll fairness using only the seed, context, and commitment.
 
@@ -76,11 +76,11 @@
 
 **Purpose**: Type checking, linting, coverage, and documentation
 
-- [X] T016 [P] Run `mypy` strict type checking on `src/vindicta_foundation/dice/` and fix any type errors
-- [X] T017 [P] Run `ruff check .` and `ruff format --check .` to verify linting and formatting compliance
-- [X] T018 Verify test coverage meets 90% minimum with `uv run pytest --cov=vindicta_foundation --cov-report=term-missing`
-- [X] T019 [P] Run quickstart.md validation: execute all code examples from `specs/01-dice-core/quickstart.md` in a Python REPL to confirm correctness
-- [X] T020 Update `src/vindicta_foundation/dice/__init__.py` module docstring with constitutional compliance notes
+- [ ] T016 [P] Run `mypy` strict type checking on `src/vindicta_foundation/dice/` and fix any type errors
+- [ ] T017 [P] Run `ruff check .` and `ruff format --check .` to verify linting and formatting compliance
+- [ ] T018 Verify test coverage meets 90% minimum with `uv run pytest --cov=vindicta_foundation --cov-report=term-missing`
+- [ ] T019 [P] Run quickstart.md validation: execute all code examples from `specs/01-dice-core/quickstart.md` in a Python REPL to confirm correctness
+- [ ] T020 Update `src/vindicta_foundation/dice/__init__.py` module docstring with constitutional compliance notes
 
 ---
 

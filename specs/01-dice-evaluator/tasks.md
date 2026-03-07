@@ -19,9 +19,9 @@
 
 **Purpose**: Project initialization and evaluator module scaffolding
 
-- [X] T001 Create evaluator package directory structure at `src/vindicta_foundation/evaluator/__init__.py`
-- [X] T002 [P] Create error hierarchy in `src/vindicta_foundation/evaluator/errors.py` with `EvaluationError`, `InvalidASTError`, `DivisionByZeroError`, `UnsupportedNodeError`, `ModifierError`
-- [X] T003 [P] Create protocols module in `src/vindicta_foundation/evaluator/protocols.py` with `DiceRoller` protocol and `RollResult` named tuple
+- [ ] T001 Create evaluator package directory structure at `src/vindicta_foundation/evaluator/__init__.py`
+- [ ] T002 [P] Create error hierarchy in `src/vindicta_foundation/evaluator/errors.py` with `EvaluationError`, `InvalidASTError`, `DivisionByZeroError`, `UnsupportedNodeError`, `ModifierError`
+- [ ] T003 [P] Create protocols module in `src/vindicta_foundation/evaluator/protocols.py` with `DiceRoller` protocol and `RollResult` named tuple
 
 ---
 
@@ -31,10 +31,10 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [X] T004 Create `TraceStep` model with `kind`, `description`, `raw_values`, `kept_values`, `dropped_values`, `intermediate_total` fields in `src/vindicta_foundation/models/evaluation.py`
-- [X] T005 Create `ExecutionTrace` model with `steps` list and `summary` field plus `add_step()` method in `src/vindicta_foundation/models/evaluation.py`
-- [X] T006 Create `EvaluationResult` model with `total`, `trace`, `entropy_proofs`, `expression_repr` fields in `src/vindicta_foundation/models/evaluation.py`
-- [X] T007 Export `EvaluationResult`, `ExecutionTrace`, `TraceStep` in `src/vindicta_foundation/models/__init__.py`
+- [ ] T004 Create `TraceStep` model with `kind`, `description`, `raw_values`, `kept_values`, `dropped_values`, `intermediate_total` fields in `src/vindicta_foundation/models/evaluation.py`
+- [ ] T005 Create `ExecutionTrace` model with `steps` list and `summary` field plus `add_step()` method in `src/vindicta_foundation/models/evaluation.py`
+- [ ] T006 Create `EvaluationResult` model with `total`, `trace`, `entropy_proofs`, `expression_repr` fields in `src/vindicta_foundation/models/evaluation.py`
+- [ ] T007 Export `EvaluationResult`, `ExecutionTrace`, `TraceStep` in `src/vindicta_foundation/models/__init__.py`
 
 **Checkpoint**: Foundation ready — evaluator engine implementation can now begin
 
@@ -48,19 +48,19 @@
 
 ### Implementation for User Story 1
 
-- [X] T008 [US1] Implement core `Evaluator` class with `__init__(roller: DiceRoller)` and `evaluate(ast: ASTNode) -> EvaluationResult` skeleton in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T009 [US1] Implement `_evaluate_integer_node()` handler for literal integer AST nodes in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T010 [US1] Implement `_evaluate_dice_pool_node()` handler that calls `roller.roll()` and records a `TraceStep` in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T011 [US1] Implement `_evaluate_binary_op_node()` handler for `+`, `-`, `*`, `/` with `DivisionByZeroError` guard in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T012 [US1] Implement `_apply_keep_highest()` modifier function that filters a dice pool and records kept/dropped values in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T013 [US1] Implement `_apply_keep_lowest()` modifier function in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T014 [US1] Implement `_apply_drop_highest()` modifier function in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T015 [US1] Implement `_apply_drop_lowest()` modifier function in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T016 [US1] Implement `_apply_reroll()` modifier function that re-invokes `roller.roll()` for matching values in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T017 [US1] Implement `_apply_exploding()` modifier function that adds bonus rolls when values match threshold in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T018 [US1] Implement `_evaluate_modified_dice_node()` handler that dispatches to the correct modifier function in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T019 [US1] Wire all node handlers into the main `evaluate()` dispatch and assemble `EvaluationResult` with entropy proofs in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T020 [US1] Export `Evaluator` from `src/vindicta_foundation/evaluator/__init__.py`
+- [ ] T008 [US1] Implement core `Evaluator` class with `__init__(roller: DiceRoller)` and `evaluate(ast: ASTNode) -> EvaluationResult` skeleton in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T009 [US1] Implement `_evaluate_integer_node()` handler for literal integer AST nodes in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T010 [US1] Implement `_evaluate_dice_pool_node()` handler that calls `roller.roll()` and records a `TraceStep` in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T011 [US1] Implement `_evaluate_binary_op_node()` handler for `+`, `-`, `*`, `/` with `DivisionByZeroError` guard in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T012 [US1] Implement `_apply_keep_highest()` modifier function that filters a dice pool and records kept/dropped values in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T013 [US1] Implement `_apply_keep_lowest()` modifier function in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T014 [US1] Implement `_apply_drop_highest()` modifier function in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T015 [US1] Implement `_apply_drop_lowest()` modifier function in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T016 [US1] Implement `_apply_reroll()` modifier function that re-invokes `roller.roll()` for matching values in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T017 [US1] Implement `_apply_exploding()` modifier function that adds bonus rolls when values match threshold in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T018 [US1] Implement `_evaluate_modified_dice_node()` handler that dispatches to the correct modifier function in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T019 [US1] Wire all node handlers into the main `evaluate()` dispatch and assemble `EvaluationResult` with entropy proofs in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T020 [US1] Export `Evaluator` from `src/vindicta_foundation/evaluator/__init__.py`
 
 **Checkpoint**: Evaluator can process any valid AST and return correct numeric totals with entropy proofs
 
@@ -74,11 +74,11 @@
 
 ### Implementation for User Story 2
 
-- [X] T021 [US2] Enhance `_evaluate_dice_pool_node()` to populate `TraceStep.raw_values` with the full unmodified roll results in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T022 [US2] Enhance all modifier functions to populate `TraceStep.kept_values`, `TraceStep.dropped_values`, and `TraceStep.description` with human-readable detail in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T023 [US2] Enhance `_evaluate_binary_op_node()` to record arithmetic `TraceStep` entries with `intermediate_total` in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T024 [US2] Implement `ExecutionTrace.summary` generation that composes a human-readable string from all steps (e.g., `"[3, 5] + 3 = 11"`) in `src/vindicta_foundation/evaluator/engine.py`
-- [X] T025 [US2] Add validation that `entropy_proofs` count matches the number of `"roll"` kind `TraceStep` entries in `src/vindicta_foundation/models/evaluation.py`
+- [ ] T021 [US2] Enhance `_evaluate_dice_pool_node()` to populate `TraceStep.raw_values` with the full unmodified roll results in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T022 [US2] Enhance all modifier functions to populate `TraceStep.kept_values`, `TraceStep.dropped_values`, and `TraceStep.description` with human-readable detail in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T023 [US2] Enhance `_evaluate_binary_op_node()` to record arithmetic `TraceStep` entries with `intermediate_total` in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T024 [US2] Implement `ExecutionTrace.summary` generation that composes a human-readable string from all steps (e.g., `"[3, 5] + 3 = 11"`) in `src/vindicta_foundation/evaluator/engine.py`
+- [ ] T025 [US2] Add validation that `entropy_proofs` count matches the number of `"roll"` kind `TraceStep` entries in `src/vindicta_foundation/models/evaluation.py`
 
 **Checkpoint**: Evaluator returns full execution traces with human-readable summaries suitable for combat log display
 
@@ -88,11 +88,11 @@
 
 **Purpose**: Quality improvements, documentation, and cross-cutting validation
 
-- [X] T026 [P] Add type annotations and ensure `mypy --strict` passes for `src/vindicta_foundation/evaluator/` directory
-- [X] T027 [P] Ensure `ruff check .` and `ruff format --check .` pass for all new files
-- [X] T028 [P] Update `src/vindicta_foundation/__init__.py` to expose evaluator public API if appropriate
-- [X] T029 Run quickstart.md validation scenarios end-to-end
-- [X] T030 Verify 90% test coverage for evaluator module with `uv run pytest --cov=vindicta_foundation.evaluator`
+- [ ] T026 [P] Add type annotations and ensure `mypy --strict` passes for `src/vindicta_foundation/evaluator/` directory
+- [ ] T027 [P] Ensure `ruff check .` and `ruff format --check .` pass for all new files
+- [ ] T028 [P] Update `src/vindicta_foundation/__init__.py` to expose evaluator public API if appropriate
+- [ ] T029 Run quickstart.md validation scenarios end-to-end
+- [ ] T030 Verify 90% test coverage for evaluator module with `uv run pytest --cov=vindicta_foundation.evaluator`
 
 ---
 
