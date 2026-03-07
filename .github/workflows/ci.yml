@@ -28,10 +28,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
-      - name: Set up Python
-        run: uv python install 3.12
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
       - name: Install docs deps
-        run: uv pip install --system mkdocs-material mkdocs-monorepo-plugin pymdown-extensions
+        run: pip install mkdocs-material mkdocs-monorepo-plugin pymdown-extensions
+
       - name: Check docs build
         run: mkdocs build --strict
