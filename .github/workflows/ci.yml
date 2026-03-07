@@ -2,45 +2,36 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+      - 'LICENSE'
+      - '.gitignore'
   pull_request:
-    branches: [ "main" ]
+    branches: [main]
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+      - 'LICENSE'
+      - '.gitignore'
 
 jobs:
-  test:
+  ci:
+    uses: vindicta-platform/.github/.github/workflows/ci-python-template.yml@main
+    permissions:
+      contents: read
+      pull-requests: write
+
+  docs:
+    name: Docs Build Check
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Install uv
-      uses: astral-sh/setup-uv@v3
-      with:
-        enable-cache: true
-        cache-dependency-glob: "pyproject.toml"
-
-    - name: Set up Python
-      run: uv python install 3.12
-      
-    - name: Install dependencies
-      run: |
-        uv lock
-        uv sync --all-extras
-      
-    - name: Lint with Ruff
-      run: |
-        uv run ruff check .
-        uv run ruff format --check .
-        
-    - name: Type Check with Mypy
-      run: uv run mypy src tests
-      
-    - name: Test with pytest
-      run: uv run pytest --cov=vindicta_foundation --cov-report=term-missing --cov-fail-under=90 -n auto
-      
-    - name: Behavior Check with behave
-      run: |
-        uv run behave
-
-    - name: Check Docs Build
-      run: |
-        uv run mkdocs build --strict
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Set up Python
+        run: uv python install 3.12
+      - name: Install docs deps
+        run: uv pip install --system mkdocs-material mkdocs-monorepo-plugin pymdown-extensions
+      - name: Check docs build
+        run: mkdocs build --strict
