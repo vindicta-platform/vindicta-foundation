@@ -1,0 +1,163 @@
+Using CPython 3.12.14 interpreter at: /opt/hostedtoolcache/Python/3.12.14/x64/bin/python3
+Resolved 193 packages in 352ms
+Added aiofiles v25.1.0
+Added aiohappyeyeballs v2.7.1
+Added aiohttp v3.14.3
+Added aiosignal v1.4.0
+Added aiosqlite v0.22.1
+Added alphashape v1.3.1
+Added annotated-doc v0.0.5
+Updated annotated-types v0.7.0 -> v0.8.0
+Added anyio v4.15.1
+Added ast-serialize v0.9.0
+Added attrs v26.1.0
+Updated backrefs v6.2 -> v8.0
+Added bcrypt v5.0.0
+Added beautifulsoup4 v4.15.0
+Added brotli v1.2.0
+Added build v1.6.0
+Updated certifi v2026.1.4 -> v2026.7.22
+Added cffi v2.1.1
+Added chardet v7.6.0
+Updated charset-normalizer v3.4.4 -> v3.5.1
+Added chromadb v1.5.9
+Updated click v8.3.1 -> v8.5.0
+Added click-log v0.4.0
+Added cloudpickle v3.1.2
+Updated coverage v7.13.4 -> v7.16.0
+Added crawl4ai v0.9.3
+Added cryptography v50.0.1
+Added cssselect v1.5.0
+Updated cucumber-expressions v19.0.0 -> v20.1.0
+Updated cucumber-tag-expressions v9.1.0 -> v11.0.1
+Added defusedxml v0.7.1
+Updated distlib v0.4.0 -> v0.4.3
+Added durationpy v0.11
+Added fake-useragent v2.2.0
+Added fastuuid v0.14.0
+Updated filelock v3.24.3 -> v3.32.5
+Added flatbuffers v25.12.19
+Added frozenlist v1.8.0
+Added fsspec v2026.7.0
+Added googleapis-common-protos v1.75.3
+Added greenlet v3.5.5
+Added grpcio v1.83.1
+Added h11 v0.16.0
+Added h2 v4.4.1
+Added hf-xet v1.6.0
+Added hpack v4.2.0
+Added httpcore v1.0.9
+Added httpcore2 v2.12.0
+Added httptools v0.8.0
+Added httpx v0.28.1
+Added httpx2 v2.12.0
+Added httpx2-jsfetch v1.0
+Added huggingface-hub v1.30.0
+Added humanize v4.16.0
+Added hyperframe v6.1.0
+Updated identify v2.6.16 -> v2.6.19
+Updated idna v3.11 -> v3.19
+Updated importlib-metadata v8.7.1 -> v9.0.1
+Updated importlib-resources v6.5.2 -> v7.1.0
+Added jiter v0.16.0
+Added joblib v1.6.0
+Added jsonschema v4.26.0
+Added jsonschema-specifications v2025.9.1
+Added kubernetes v36.0.3
+Added lark v1.3.1
+Updated librt v0.7.8 -> v0.15.0
+Added lxml v6.1.3
+Updated markdown v3.10.2 -> v3.10.3
+Added markdown-it-py v4.2.0
+Added mcp v2.1.1
+Added mcp-types v2.1.1
+Added mdurl v0.1.2
+Updated mike v2.1.3 -> v2.2.0
+Updated mkdocs-get-deps v0.2.0 -> v0.2.2
+Updated mkdocs-material v9.7.2 -> v9.7.7
+Added mmh3 v5.3.0
+Added multidict v6.7.1
+Updated mypy v1.19.1 -> v2.3.1
+Added networkx v3.6.1
+Added nltk v3.10.3
+Added numpy v2.5.3
+Added oauthlib v3.3.1
+Added ollama v0.6.2
+Added onnxruntime v1.29.0
+Added openai v3.8.0
+Added opentelemetry-api v1.44.0
+Added opentelemetry-exporter-otlp-proto-common v1.44.0
+Added opentelemetry-exporter-otlp-proto-grpc v1.44.0
+Added opentelemetry-proto v1.44.0
+Added opentelemetry-sdk v1.44.0
+Added opentelemetry-semantic-conventions v0.65b0
+Added orjson v3.12.0
+Added overrides v7.7.0
+Updated packaging v26.0 -> v26.3
+Updated parse v1.21.1 -> v1.22.1
+Added patchright v1.62.3
+Updated pathspec v1.0.4 -> v1.1.1
+Added pillow v12.3.0
+Updated platformdirs v4.9.2 -> v4.11.7
+Added playwright v1.62.0
+Added playwright-stealth v2.0.3
+Updated pre-commit v4.5.1 -> v4.6.2
+Added propcache v0.5.2
+Added protobuf v7.36.1
+Added psutil v7.2.2
+Added pybase64 v1.5.0
+Added pycparser v3.0
+Updated pydantic v2.12.5 -> v2.13.5
+Updated pydantic-core v2.41.5 -> v2.46.5
+Added pydantic-settings v2.15.0
+Added pyee v13.0.1
+Updated pygments v2.19.2 -> v2.21.0
+Added pyjwt v2.13.0
+Updated pymdown-extensions v10.21 -> v11.0.2
+Added pyopenssl v26.4.0
+Added pypika v0.51.1
+Added pyproject-hooks v1.2.0
+Updated pytest v9.0.2 -> v9.1.1
+Updated pytest-cov v7.0.0 -> v7.1.0
+Added python-discovery v1.6.0
+Added python-dotenv v1.2.3
+Added python-multipart v0.0.32
+Added pywin32 v312
+Added rank-bm25 v0.2.2
+Added referencing v0.37.0
+Added regex v2026.9.3
+Updated requests v2.32.5 -> v2.34.2
+Added requests-oauthlib v2.0.0
+Added rich v15.0.0
+Added rpds-py v2026.6.3
+Added rtree v1.4.1
+Updated ruff v0.15.0 -> v0.16.6
+Added scipy v1.18.1
+Added shapely v2.1.2
+Added shellingham v1.5.4
+Added sniffio v1.3.1
+Added snowballstemmer v2.2.0
+Added soupsieve v2.9.2
+Added sse-starlette v3.4.11
+Added starlette v1.6.0
+Added tenacity v9.1.4
+Added tiktoken v0.14.0
+Added tokenizers v0.23.2
+Updated towncrier v25.8.0 -> v26.9.0
+Added tqdm v4.70.0
+Added trimesh v5.1.0
+Added truststore v0.10.4
+Added typer v0.27.2
+Updated typing-extensions v4.15.0 -> v4.16.0
+Updated typing-inspection v0.4.2 -> v0.4.4
+Added unclecode-litellm v1.81.13
+Updated urllib3 v2.6.3 -> v2.7.0
+Added uvicorn v0.52.4
+Added uvloop v0.22.1
+Updated virtualenv v20.38.0 -> v21.7.8
+Added watchfiles v1.2.0
+Added websocket-client v1.9.2
+Added websockets v17.1
+Added xxhash v3.8.1
+Added yarl v1.24.5
+Updated zipp v3.23.0 -> v4.1.0
