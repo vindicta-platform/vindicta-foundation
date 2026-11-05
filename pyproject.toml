@@ -5,6 +5,8 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "vindicta-foundation"
 version = "0.1.0"
+authors = [{ name = "Brandon Fox", email = "bfoxtrotfarm@gmail.com" }]
+license = { text = "MIT" }
 description = "Axiomatic core models and architecture for the Vindicta Platform"
 readme = "README.md"
 requires-python = ">=3.12"
