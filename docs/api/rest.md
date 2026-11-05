@@ -29,10 +29,7 @@ Submit a WARScribe transcript for analysis.
   "transcript": "...",
   "config": {
     "edition": "10th",
-<<<<<<< HEAD
-=======
     "simulate_dice": true
->>>>>>> docs/migration-to-foundation
   }
 }
 ```
@@ -43,11 +40,7 @@ Submit a WARScribe transcript for analysis.
 POST /oracle/ask
 ```
 
-<<<<<<< HEAD
-Query the Meta-Oracle for meta analysis or strategic advice.
-=======
 Query the Meta-Oracle for rules interpretations or strategic advice.
->>>>>>> docs/migration-to-foundation
 
 ---
 
