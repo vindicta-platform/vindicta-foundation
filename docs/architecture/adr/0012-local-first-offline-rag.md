@@ -6,7 +6,7 @@
 
 ## Context
 
-The `vindicta-platform` requires a Retrieval-Augmented Generation (RAG) subsystem (the `vindicta-oracle`) capable of storing and searching the complex, hierarchical rulesets of Warhammer 40k. 
+The `vindicta-platform` requires a Retrieval-Augmented Generation (RAG) subsystem (the `vindicta-oracle`) capable of storing and searching the complex, hierarchical rulesets of Warhammer 40k.
 
 A traditional GenAI application would typically deploy an external cloud-hosted Vector Database (Pinecone, Weaviate) and rely on commercial embedding models (OpenAI `text-embedding-3-large`). However, the Vindicta Platform architecture enforces a strict **Local-First MVP Constraint** for all underlying primitives (as defined in the Zero-Order Axioms surrounding deterministic play and cost efficiency).
 
@@ -14,7 +14,7 @@ A traditional GenAI application would typically deploy an external cloud-hosted 
 
 The RAG pipeline MUST be implemented using purely local, embedded, and "cost-free" infrastructure during the platform's MVP and Gen-Zero phases.
 
-1. **Storage**: The pipeline will utilize `ChromaDB` running in `PersistentClient` mode (embedded directly into the local filesystem) backed by SQLite for metadata persistence. 
+1. **Storage**: The pipeline will utilize `ChromaDB` running in `PersistentClient` mode (embedded directly into the local filesystem) backed by SQLite for metadata persistence.
 2. **Embeddings**: The pipeline will exclusively use the `ollama` unified Python client calling locally hosted embedding models (e.g., `nomic-embed-text` or `llama3.2`).
 
 ## Consequences
@@ -28,7 +28,7 @@ The RAG pipeline MUST be implemented using purely local, embedded, and "cost-fre
 ### Negative
 
 - **Resource Constraint**: Local embedding generation and ChromaDB lookups consume significant local RAM/CPU, meaning development machines (and eventually production agents) require sufficient hardware to host the models.
-- **Scaling Complexity**: An embedded local SQLite/Chroma setup is not horizontally scalable. As the platform moves beyond the MVP into concurrent multi-tenant usage, an externalized service will be required. 
+- **Scaling Complexity**: An embedded local SQLite/Chroma setup is not horizontally scalable. As the platform moves beyond the MVP into concurrent multi-tenant usage, an externalized service will be required.
 
 ### Neutral
 

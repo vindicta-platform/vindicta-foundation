@@ -29,19 +29,19 @@ C4Container
     Person(user, "User", "A player or tournament organizer")
 
     Container_Boundary(vindicta_platform_boundary, "Vindicta Platform Organization") {
-        
+
         Container(foundation, "vindicta-foundation", "Python/Pydantic", "Shared Kernel: Base Models, Architecture, Constitution. Single Source of Truth.")
-        
+
         Container(platform, "vindicta-platform", "Python (API) / JS (Portal)", "User Interface, API Gateway, and Identity Management.")
-        
+
         Container(engine, "vindicta-engine", "Python", "Physics, Dice Engine, Core Game Logic, and Simulation.")
-        
+
         Container(scribe, "warscribe-system", "Python/AI", "Notation Parsing, Game State Reconstruction, and OCR/Vision.")
-        
+
         Container(economy, "vindicta-economy", "Python", "Atomic Ledger, Quota Management, and 'Gas Tank' Billing.")
-        
+
         Container(oracle, "vindicta-oracle", "Python/ML", "Predictive Models, Meta Analysis, and List Grading.")
-        
+
         Container(agents, "vindicta-agents", "Python SDK", "Autonomous Agents, Swarm Infrastructure, and Auditor SDK.")
     }
 
@@ -60,11 +60,11 @@ C4Container
     Rel(platform, scribe, "Parses uploaded logs via", "Pub/Sub")
     Rel(platform, economy, "Authorization & Billing", "gRPC/HTTP")
     Rel(platform, oracle, "Requests predictions", "Async Job")
-    
+
     %% Inter-Service Logic
     Rel(scribe, engine, "Validates moves using", "Library Import")
     Rel(oracle, scribe, "Analyzes canonical games from", "Data Warehouse")
-    
+
     %% Agent Interactions
     Rel(agents, platform, "Automates tasks via", "Public API")
     Rel(agents, economy, "Consumes credits for", "Compute")

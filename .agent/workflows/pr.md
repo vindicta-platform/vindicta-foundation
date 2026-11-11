@@ -8,7 +8,7 @@ description: Generate a standardized Pull Request description and submit or upda
     *   **Changes**: A bulleted list of the specific files changed and what was done.
     *   **Why**: The root cause, business value, or technical reason for the change.
     *   **Verification**: How the changes were verified locally (e.g., test commands, manual inspections).
-3. **Submit/Edit**: 
+3. **Submit/Edit**:
     *   If creating a new PR, run: `gh pr create --title "<Title>" --body-file PR_BODY.md`
     *   If updating an existing PR, run: `gh pr edit <PR_NUMBER> --title "<Title>" --body-file PR_BODY.md`
 4. **Cleanup**: Remove the temporary `PR_BODY.md` file using native OS commands (e.g., `Remove-Item PR_BODY.md -Force`).

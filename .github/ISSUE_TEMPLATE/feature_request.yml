@@ -8,7 +8,7 @@ body:
       value: |
         *Thank you for suggesting an improvement to the Vindicta Foundation!*
         *Please make sure this request aligns with the Zero-Order Axioms defined in `docs/constitution.md`.*
-  
+
   - type: textarea
     id: problem
     attributes:
@@ -16,7 +16,7 @@ body:
       description: What problem are you trying to solve? Please provide as much context as possible.
     validations:
       required: true
-      
+
   - type: textarea
     id: proposal
     attributes:
@@ -24,7 +24,7 @@ body:
       description: What is your preferred implementation path or architectural model?
     validations:
       required: true
-      
+
   - type: textarea
     id: alternatives
     attributes:
@@ -32,7 +32,7 @@ body:
       description: What other approaches did you consider and why did you discard them?
     validations:
       required: false
-      
+
   - type: checkboxes
     id: constitution
     attributes:

@@ -63,7 +63,7 @@ As a platform maintainer, I want the system to ingest data from Wahapedia and 40
 
 - **NFR-001**: System MUST use Python's standard `logging` module with structured log messages (timestamps, log levels, contextual data) for all pipeline operations (scraping, storage, query serving). Logs MUST be emitted to stdout and optionally to a log file.
 
-### Key Entities 
+### Key Entities
 
 - **Rules Segment**: A contextual chunk of markdown rules text, accompanied by its embedding vector, URL origin, a unique hash, an insertion timestamp, and a version identifier so older versions of rules can be recognized.
 - **Agent Query**: A focused natural language string passed to the server to look up rules.

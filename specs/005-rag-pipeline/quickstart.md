@@ -1,6 +1,6 @@
 # Quickstart: RAG Pipeline
 
-This quickstart guides you through running the local MVP of the RAG Pipeline for Vindicta Agents. 
+This quickstart guides you through running the local MVP of the RAG Pipeline for Vindicta Agents.
 
 ## Prerequisites
 - Ollama installed locally (`ollama pull llama3`, `ollama pull nomic-embed-text`)

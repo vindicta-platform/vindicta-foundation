@@ -3,20 +3,26 @@ repos:
     rev: v4.5.0
     hooks:
       - id: trailing-whitespace
+        # Two trailing spaces are a Markdown hard line break; keep them.
+        args: [--markdown-linebreak-ext=md]
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
 
+  # Same ruff version as uv.lock, so the hook and the CI test job agree on formatting.
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.0 # Ensure this matches the minimum ruff version
+    rev: v0.15.0
     hooks:
       - id: ruff
         args: [ --fix ]
       - id: ruff-format
 
+  # Type-check the package only. The hook runs in its own environment without pytest or behave,
+  # so checking tests/ and features/ here can only fail; the CI test job type-checks src/ with
+  # the full dependency set. Strictness comes from [tool.mypy] in pyproject.toml.
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.0.0
+    rev: v1.19.1
     hooks:
       - id: mypy
-        additional_dependencies: [pydantic]
-        args: ["--strict"]
+        files: ^src/
+        additional_dependencies: [pydantic, lark]

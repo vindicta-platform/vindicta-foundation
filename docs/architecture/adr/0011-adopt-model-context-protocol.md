@@ -10,7 +10,7 @@ The Vindicta platform's AI swarm relies heavily on accessing external systems, s
 
 ## Decision
 
-Adopt the **Model Context Protocol (MCP)** as the standard integration layer for all agent tools within the Vindicta ecosystem. 
+Adopt the **Model Context Protocol (MCP)** as the standard integration layer for all agent tools within the Vindicta ecosystem.
 
 All external tool interfaces—starting with the RAG Pipeline's `search_40k_rules` logic—MUST be exposed as an MCP Server. The `vindicta-agents` SDK MUST consume these services via an MCP Client interface.
 

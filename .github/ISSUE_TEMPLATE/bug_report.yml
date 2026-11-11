@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         *Thank you for reporting a bug and helping build a stronger Foundation.*
-  
+
   - type: textarea
     id: description
     attributes:
@@ -21,7 +21,7 @@ body:
     attributes:
       label: Steps to Reproduce
       description: |
-        How can we reproduce the problem? 
+        How can we reproduce the problem?
         If applicable, provide a short snippet of code or a Gherkin-style behavior step.
     validations:
       required: true
@@ -33,7 +33,7 @@ body:
       description: A clear and concise description of what you expected to happen.
     validations:
       required: true
-      
+
   - type: dropdown
     id: severity
     attributes:

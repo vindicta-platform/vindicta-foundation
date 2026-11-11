@@ -6,7 +6,7 @@
 
 ## Context
 
-The Vindicta Oracle's RAG Pipeline handles large volumes of scraped web text and data transformations (e.g., Wahapedia rules) converted to optimized Markdown for the Agent Swarm. 
+The Vindicta Oracle's RAG Pipeline handles large volumes of scraped web text and data transformations (e.g., Wahapedia rules) converted to optimized Markdown for the Agent Swarm.
 
 Because sources frequently update—and because scraping runs may overlap or crash—the Storage Layer cannot simply perform unstructured `INSERT` commands. Without a deterministic identification schema for knowledge chunks, the Vector DB (`ChromaDB`) would balloon with duplicated embeddings of identical rules, causing retrieval degradation, unnecessary compute costs, and a polluted context window.
 

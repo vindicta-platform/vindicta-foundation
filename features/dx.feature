@@ -16,5 +16,5 @@ Feature: Developer Experience
 
   Scenario: Pytest is optimally configured for parallel execution
     Given the Justfile exists
-    When I locate the test execution command 
+    When I locate the test execution command
     Then it should be configured to run pytest with "-n auto"
