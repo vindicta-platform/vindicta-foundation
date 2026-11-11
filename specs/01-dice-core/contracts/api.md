@@ -1,7 +1,7 @@
 # Contract: DiceEngine API
 
-**Feature**: dice-core
-**Type**: Python Library (Pure API)
+**Feature**: dice-core  
+**Type**: Python Library (Pure API)  
 **Date**: 2026-02-22
 
 ---

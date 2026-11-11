@@ -1,8 +1,8 @@
 # Feature Specification: RAG Pipeline
 
-**Feature Branch**: `005-rag-pipeline`
-**Created**: 2026-02-23
-**Status**: Draft
+**Feature Branch**: `005-rag-pipeline`  
+**Created**: 2026-02-23  
+**Status**: Draft  
 **Input**: User description: "Implementation plan for RAG pipeline"
 
 ## Clarifications

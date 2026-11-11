@@ -1,6 +1,6 @@
 # Quickstart: dice-core
 
-**Feature**: Dice Core — CSPRNG with Verifiable Entropy Proofs
+**Feature**: Dice Core — CSPRNG with Verifiable Entropy Proofs  
 **Date**: 2026-02-22
 
 ---

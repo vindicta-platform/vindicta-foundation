@@ -3,6 +3,8 @@ repos:
     rev: v4.5.0
     hooks:
       - id: trailing-whitespace
+        # Two trailing spaces are a Markdown hard line break; keep them.
+        args: [--markdown-linebreak-ext=md]
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
