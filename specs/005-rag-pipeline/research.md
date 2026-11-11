@@ -9,7 +9,7 @@ Resolve unknowns regarding the local tooling and tech stack for the MVP RAG Pipe
 ### 1. Vector Storage Database
 - **Decision**: **ChromaDB**
 - **Rationale**: ChromaDB is exceptionally well-suited for local, entirely strictly-offline MVPs. It runs embedded natively in Python without requiring any external docker containers for the database itself, perfectly adhering to the "local tooling" requirement. It also seamlessly integrates with local embedding providers.
-- **Alternatives considered**: 
+- **Alternatives considered**:
   - *LanceDB*: Also excellent for embedded usage, but Chroma provides a somewhat gentler learning curve for rapid MVP integration.
   - *Pinecone / Milvus*: Rejected because they are cloud-first or require complex infrastructure deployment, violating the local MVP constraint.
 

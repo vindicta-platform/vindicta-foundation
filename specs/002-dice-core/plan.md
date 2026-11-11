@@ -1,6 +1,6 @@
 # Implementation Plan: dice-core
 
-**Spec ID**: `002-dice-core` | **Branch**: `feat/dice-core` | **Date**: 2026-02-22 | **Spec**: [spec.md](./spec.md)  
+**Spec ID**: `002-dice-core` | **Branch**: `feat/dice-core` | **Date**: 2026-02-22 | **Spec**: [spec.md](./spec.md)
 **Input**: Feature specification from `/specs/002-dice-core/spec.md`
 
 ## Summary
@@ -9,14 +9,14 @@ Implement a CSPRNG-backed dice engine with HMAC-SHA256 verifiable entropy proofs
 
 ## Technical Context
 
-**Language/Version**: Python 3.12  
-**Primary Dependencies**: `pydantic>=2.10.0` (existing), `secrets`/`hmac`/`hashlib` (stdlib)  
-**Storage**: N/A — pure in-memory library  
-**Testing**: `pytest` with `pytest-cov`, `pytest-mock`  
-**Target Platform**: Cross-platform (Linux, macOS, Windows)  
-**Project Type**: Library module within `vindicta-foundation`  
-**Performance Goals**: < 1ms per roll+proof generation (SC-003)  
-**Constraints**: No external services, no `random` module in production paths, stdlib-only cryptography  
+**Language/Version**: Python 3.12
+**Primary Dependencies**: `pydantic>=2.10.0` (existing), `secrets`/`hmac`/`hashlib` (stdlib)
+**Storage**: N/A — pure in-memory library
+**Testing**: `pytest` with `pytest-cov`, `pytest-mock`
+**Target Platform**: Cross-platform (Linux, macOS, Windows)
+**Project Type**: Library module within `vindicta-foundation`
+**Performance Goals**: < 1ms per roll+proof generation (SC-003)
+**Constraints**: No external services, no `random` module in production paths, stdlib-only cryptography
 **Scale/Scope**: Single module, 4 source files, ~200-300 LOC
 
 ## Constitution Check

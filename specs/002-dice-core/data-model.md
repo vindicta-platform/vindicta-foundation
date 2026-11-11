@@ -1,7 +1,7 @@
 # Data Model: dice-core
 
-**Feature**: Dice Core — CSPRNG with Verifiable Entropy Proofs  
-**Date**: 2026-02-22  
+**Feature**: Dice Core — CSPRNG with Verifiable Entropy Proofs
+**Date**: 2026-02-22
 **Base Class**: `VindictaModel` from `src/vindicta_foundation/models/base.py`
 
 ---
@@ -54,8 +54,8 @@ classDiagram
 
 ### 1. RollEntropy (NEW)
 
-**Source**: spec.md Key Entity "RollEntropy"  
-**Purpose**: Encapsulates the seed material, HMAC commitment, and verification logic for a single roll event.  
+**Source**: spec.md Key Entity "RollEntropy"
+**Purpose**: Encapsulates the seed material, HMAC commitment, and verification logic for a single roll event.
 **Inherits from**: `VindictaModel`
 
 | Field        | Type       | Required | Default         | Description                                           |
@@ -82,8 +82,8 @@ classDiagram
 
 ### 2. RandomResult (NEW)
 
-**Source**: spec.md Key Entity "RandomResult"  
-**Purpose**: Contains the generated random integers along with the cryptographic proof binding.  
+**Source**: spec.md Key Entity "RandomResult"
+**Purpose**: Contains the generated random integers along with the cryptographic proof binding.
 **Inherits from**: `VindictaModel`
 
 | Field         | Type          | Required | Default    | Description                                     |
@@ -119,7 +119,7 @@ classDiagram
 
 ## Service: DiceEngine (Protocol/Interface)
 
-**Purpose**: Defines the contract for random number generation with proofs.  
+**Purpose**: Defines the contract for random number generation with proofs.
 **Not a model** — this is a service-layer protocol.
 
 | Method | Signature                                                            | Returns        | Description                                                             |

@@ -1,8 +1,8 @@
 # Feature Specification: dice-core
 
-**Spec ID**: `002-dice-core` | **Branch**: `feat/dice-core`  
-**Created**: 2026-02-22  
-**Status**: Draft  
+**Spec ID**: `002-dice-core` | **Branch**: `feat/dice-core`
+**Created**: 2026-02-22
+**Status**: Draft
 **Input**: User description: "Dice Engine: Implement CSPRNG with verifiable entropy proofs (dice-core)"
 
 ## User Scenarios & Testing *(mandatory)*

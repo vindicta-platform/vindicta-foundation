@@ -5,7 +5,7 @@ The WARScribe OCR Parser leverages the base `VindictaModel` to serialize data ex
 ## Core Entities
 
 ### ObjectiveScore
-A granular record representing points scored linearly across 5 distinct game rounds. 
+A granular record representing points scored linearly across 5 distinct game rounds.
 **Fields**:
 - `name` (str): Label of the objective (e.g. "Area Denial").
 - `rounds` (list[int | None]): Values scored per round. `None` implies dash/unavailable.

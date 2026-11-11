@@ -1,8 +1,8 @@
 # Feature Specification: WARScribe OCR Parser
 
-**Feature Branch**: `001-ocr-parser`  
-**Created**: 2026-02-22  
-**Status**: Draft  
+**Feature Branch**: `001-ocr-parser`
+**Created**: 2026-02-22
+**Status**: Draft
 **Input**: User description: "create an OCR parser to take images and parse them into formatting ready for consumption for Warscribe, Primordia and other Platform tasks"
 
 ## User Scenarios & Testing *(mandatory)*

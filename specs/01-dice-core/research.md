@@ -1,7 +1,7 @@
 # Research: dice-core
 
-**Feature**: Dice Core — CSPRNG with Verifiable Entropy Proofs  
-**Date**: 2026-02-22  
+**Feature**: Dice Core — CSPRNG with Verifiable Entropy Proofs
+**Date**: 2026-02-22
 **Status**: Complete
 
 ---

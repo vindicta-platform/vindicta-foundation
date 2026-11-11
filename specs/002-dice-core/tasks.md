@@ -1,6 +1,6 @@
 # Tasks: dice-core
 
-**Input**: Design documents from `/specs/01-dice-core/`  
+**Input**: Design documents from `/specs/01-dice-core/`
 **Prerequisites**: plan.md ✅, spec.md ✅, data-model.md ✅, contracts/api.md ✅, research.md ✅, quickstart.md ✅
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing.

@@ -27,7 +27,7 @@ from vindicta_foundation.evaluator.protocols import DiceRoller
 class MockRoller:
     def __init__(self, values: list[list[int]]):
         self._values = iter(values)
-    
+
     def roll(self, sides: int, count: int = 1) -> "RollResult":
         from vindicta_foundation.evaluator.protocols import RollResult
         from vindicta_foundation.models.entropy import EntropyProof

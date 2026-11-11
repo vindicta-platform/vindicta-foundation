@@ -1,8 +1,8 @@
 # Feature Specification: dice-parser
 
-**Spec ID**: `004-dice-parser` | **Branch**: `feat/dice-parser`  
-**Created**: 2026-02-22  
-**Status**: Draft  
+**Spec ID**: `004-dice-parser` | **Branch**: `feat/dice-parser`
+**Created**: 2026-02-22
+**Status**: Draft
 **Input**: User description: "Dice Engine: Implement parser for dice notation strings into typed AST (dice-parser)"
 
 > [!NOTE]

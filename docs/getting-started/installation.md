@@ -125,4 +125,3 @@ If the devcontainer appears to hang with no output, use the open-source CLI to s
 ```bash
 npx -y @devcontainers/cli up --workspace-folder .
 ```
-
