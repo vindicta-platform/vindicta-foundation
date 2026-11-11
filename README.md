@@ -1,6 +1,6 @@
 # Vindicta Foundation
 
-> **Status:** reference implementation of the shared kernel (base models, constitution docs) for the Vindicta design record; maintained for reading, not for new features. Single maintainer.
+> **Status:** active, pre-1.0. Shared kernel for the Vindicta Platform (base models, constitution docs) and home of the dice core (spec 002), the first part being built to completion; work resumed November 2026. Single maintainer.
 
 > 📢 **Notice:** This repository is a Component Submodule of the Vindicta Platform Monorepo. For local development, testing, and dependency resolution, please clone the root [vindicta-platform](https://github.com/vindicta-platform/vindicta-platform) repository.
 
