@@ -1,5 +1,9 @@
 # Vindicta Foundation
 
+<!-- BADGES:START -->
+![CI](https://github.com/vindicta-platform/vindicta-foundation/actions/workflows/ci.yml/badge.svg) ![License](https://img.shields.io/github/license/vindicta-platform/vindicta-foundation) ![Version](https://img.shields.io/github/v/release/vindicta-platform/vindicta-foundation?include_prereleases) ![Issues](https://img.shields.io/github/issues/vindicta-platform/vindicta-foundation) ![PRs](https://img.shields.io/github/issues-pr/vindicta-platform/vindicta-foundation)
+<!-- BADGES:END -->
+
 > **Status:** active, pre-1.0. Shared kernel for the Vindicta Platform (base models, constitution docs) and home of the dice core (spec 002), the first part being built to completion; work resumed November 2026. Single maintainer.
 
 > 📢 **Notice:** This repository is a Component Submodule of the Vindicta Platform Monorepo. For local development, testing, and dependency resolution, please clone the root [vindicta-platform](https://github.com/vindicta-platform/vindicta-platform) repository.
