@@ -13,9 +13,13 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   ci:
-    uses: vindicta-platform/.github/.github/workflows/ci-python-template.yml@main
+    uses: vindicta-platform/.github/.github/workflows/ci-python-template.yml@b25991df3c05c3faa4a1376ba206492f8b2ad504 # main
     permissions:
       contents: read
       pull-requests: write
@@ -23,10 +27,11 @@ jobs:
   docs:
     name: Docs Build Check
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
           python-version: '3.12'
 
