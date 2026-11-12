@@ -1,5 +1,7 @@
 # Vindicta Foundation
 
+> **Status:** active, pre-1.0. Shared kernel for the Vindicta Platform (base models, constitution docs) and home of the dice core (spec 002), the first part being built to completion; work resumed November 2026. Single maintainer.
+
 > 📢 **Notice:** This repository is a Component Submodule of the Vindicta Platform Monorepo. For local development, testing, and dependency resolution, please clone the root [vindicta-platform](https://github.com/vindicta-platform/vindicta-platform) repository.
 
 
@@ -33,3 +35,7 @@ Coverage Mandate: ≥90%
 - [🏗️ ADRs](docs/architecture/adr/): Architectural Decision Records.
 - [🗺️ C4 Models](docs/architecture/C4-Target-State.md): System architecture diagrams.
 - [📚 Core Concepts](docs/concepts/): Deep dives into WARScribe and platform logic.
+
+## Independence
+
+This is a personal project by Brandon Fox, built on my own time and equipment. It is not affiliated with, endorsed by, or derived from the work of any employer, current or former, and does not represent their views, products or practices. Licensed under the MIT License; principles at [First-ADE/PRINCIPLES.md](https://github.com/First-ADE/.github/blob/main/PRINCIPLES.md).
